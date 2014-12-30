@@ -10,5 +10,10 @@
   <%= @topic.content %>
 </p>
 
+<p>
+  <strong>Created:</strong>
+  <%= time_ago_in_words(@topic.created_at) %> ago
+</p>
+
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
