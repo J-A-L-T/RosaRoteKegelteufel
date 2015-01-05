@@ -9,6 +9,7 @@
 
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
+        <li><%= link_to 'Forum', topics_path %></li>
         <% if current_user %>
             <li>Hi, <%= current_user.email %></li>
         <% else %>

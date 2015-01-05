@@ -6,7 +6,13 @@
 </p>
 
 <p>
+  <strong>Created:</strong>
+  <%= time_ago_in_words(@topic.created_at) %> ago
+</p>
+
+<p>
   <strong>Content:</strong>
+  </br>
   <%= @topic.content %>
 </p>
 
