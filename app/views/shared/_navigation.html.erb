@@ -8,11 +8,10 @@
     <a class="navbar-brand" href="#">Rosarote Kegelteufel</a>
 
     <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav pull-right">
         <li><%= link_to 'Forum', topics_path %></li>
         <% if current_user %>
-            <li>Hi, <%= current_user.email %></li>
-            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to current_user.email, destroy_user_session_path, method: :delete %></li>
         <% else %>
             <li><%= link_to 'Sign in', new_user_session_path %></li>
             <li><%= link_to 'Sign up', new_user_registration_path %></li>
