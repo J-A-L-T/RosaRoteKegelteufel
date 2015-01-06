@@ -9,7 +9,9 @@ class TopicsController < ApplicationController
 
   # GET /topics/1
   # GET /topics/1.json
-  def show
+  def show 
+  @topic = Topic.find(params[:id]) 
+  @comment = Comment.new( :topic => @topic )
   end
 
   # GET /topics/new

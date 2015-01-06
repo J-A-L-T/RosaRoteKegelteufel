@@ -18,3 +18,21 @@
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
+
+<hr/> 
+<%= render :partial => 'comment', :collection => @topic.comments %>
+
+<%= form_for(@comment) do |f| %>
+
+  <%= f.hidden_field :topic_id %>
+
+  <div class="field">
+    <%= f.label "Comment" %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
