@@ -1,0 +1,5 @@
+<div class="comment"> 
+  <%= simple_format h(comment.body) %> 
+  <%= link_to 'Delete Comment', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<hr/> 

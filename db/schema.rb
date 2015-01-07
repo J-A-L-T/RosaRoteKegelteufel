@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230153802) do
+ActiveRecord::Schema.define(version: 20150106113732) do
+
+  create_table "commentgs", force: true do |t|
+    t.text     "body"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "commentgs", ["topic_id"], name: "index_commentgs_on_topic_id"
+
+  create_table "comments", force: true do |t|
+    t.text     "body"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "title"

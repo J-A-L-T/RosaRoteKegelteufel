@@ -1,2 +1,3 @@
-class Topic < ActiveRecord::Base
-end
+class Topic < ActiveRecord::Base 
+   has_many :comments, :dependent => :destroy 
+end 
