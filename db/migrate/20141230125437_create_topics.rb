@@ -4,6 +4,7 @@ class CreateTopics < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.references :user, index: true
+      t.references :tag, index: true
       t.timestamps
     end
   end
