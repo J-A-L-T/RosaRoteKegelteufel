@@ -14,11 +14,11 @@
       <tr>
         <td>
           <% if topic.tag_id == 2 %>
-          <span class = "btn btn-xs btn-danger">
+          <span class = "btn btn-xs btn-danger disabled">
           <% elsif topic.tag_id == 3 %>
-          <span class = "btn btn-xs btn-info">
+          <span class = "btn btn-xs btn-info disabled">
           <% elsif topic.tag_id == 4 %>
-          <span class = "btn btn-xs btn-success">
+          <span class = "btn btn-xs btn-success disabled">
           <%end%>
 
           <%= link_to Tag.find_by_id(topic.tag).name, topic%>
