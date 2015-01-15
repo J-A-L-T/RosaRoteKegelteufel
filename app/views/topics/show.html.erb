@@ -20,7 +20,7 @@
 </p> -->
 
 <p>
-  <strong>[<%= Tag.find_by_id(@topic.tag).name %>] <%= @topic.title %></strong>
+  <strong><%= Tag.find_by_id(@topic.tag).name %><%= @topic.title %></strong>
 </p>
 <p>
   by <%= User.find_by_id(@topic.user_id).email %> 
