@@ -5,8 +5,49 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Tags für Topics
 Tag.create name: ''
 Tag.create name: '[Wichtig]'
 Tag.create name: '[Umfrage]'
 Tag.create name: '[Frage]'
 
+#Testbenutzer
+usermail = "test@test.de"
+userpass = "12345678"
+User.create(email: usermail, password: userpass,password_confirmation: userpass)
+puts "-------------------------------"
+puts "Testbenutzer erstellt"
+puts "Benutzer = " + usermail
+puts "Passwort = " + userpass
+puts "-------------------------------"
+
+#Testtopic 1
+topic_user_id = 1
+topic_title = "Dies ist ein Testtopic"
+topic_tag_id = 2
+topic_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+Topic.create(user_id: topic_user_id, title: topic_title, tag_id: topic_tag_id, content: topic_content)
+
+#Testtopic 2
+topic_user_id = 1
+topic_title = "Wie gefällt euch unser Forum bisher?"
+topic_tag_id = 4
+topic_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+Topic.create(user_id: topic_user_id, title: topic_title, tag_id: topic_tag_id, content: topic_content)
+puts "Testtopics erstellt"
+puts "-------------------------------"
+
+#Testcomment 1
+comment_topic_id = 2
+comment_user_id = 1
+comment_body = "Also mit gefällt es super!"
+Comment.create(user_id: comment_user_id, topic_id: comment_topic_id, body: comment_body)
+
+#Testcomment 2
+comment_topic_id = 2
+comment_user_id = 1
+comment_body = "Ja, echt nen super Ding!"
+Comment.create(user_id: comment_user_id, topic_id: comment_topic_id, body: comment_body)
+puts "Testcomments erstellt"
+puts "-------------------------------"
