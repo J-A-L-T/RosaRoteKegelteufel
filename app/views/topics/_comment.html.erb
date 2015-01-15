@@ -1,4 +1,8 @@
-<div class="comment"> 
+<div class="comment">
+<p>
+  <strong>  <%= User.find_by_id(comment.user_id).email %> sagt:</strong>
+
+</p>
   <%= simple_format h(comment.body) %> 
   <%= link_to 'Delete Comment', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

@@ -1,11 +1,30 @@
+<!-- <p>
+  <strong>User:</strong>
+<%= User.find_by_id(@topic.user_id).email %> 
+</p>
+
 <p>
   <strong>Title:</strong>
-  <%= @topic.title %>
+  [<%= Tag.find_by_id(@topic.tag).name %>] <%= @topic.title %>
 </p>
 
 <p>
   <strong>Created:</strong>
   <%= time_ago_in_words(@topic.created_at) %> ago
+</p>
+
+<p>
+  <strong>Content:</strong>
+  </br>
+  <%= @topic.content %>
+</p> -->
+
+<p>
+  <strong><%= Tag.find_by_id(@topic.tag).name %><%= @topic.title %></strong>
+</p>
+<p>
+  by <%= User.find_by_id(@topic.user_id).email %> 
+  created <%= time_ago_in_words(@topic.created_at) %> ago
 </p>
 
 <p>
@@ -22,6 +41,7 @@
 
 <%= form_for(@comment) do |f| %>
 
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.hidden_field :topic_id %>
 
   <div class="field">

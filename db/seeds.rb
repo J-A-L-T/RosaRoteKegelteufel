@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Tag.create name: ''
+Tag.create name: '[Wichtig]'
+Tag.create name: '[Umfrage]'
+Tag.create name: '[Frage]'
+
