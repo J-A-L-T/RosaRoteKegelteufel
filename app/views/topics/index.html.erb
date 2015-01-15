@@ -1,6 +1,6 @@
 <h1>Listing topics</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Tag</th>
@@ -12,7 +12,18 @@
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= Tag.find_by_id(topic.tag).name %></td>
+        <td>
+          <% if topic.tag_id == 2 %>
+          <span class = "btn btn-xs btn-danger">
+          <% elsif topic.tag_id == 3 %>
+          <span class = "btn btn-xs btn-info">
+          <% elsif topic.tag_id == 4 %>
+          <span class = "btn btn-xs btn-success">
+          <%end%>
+
+          <%= link_to Tag.find_by_id(topic.tag).name, topic%>
+          </span>
+        </td>
         <td><%= link_to topic.title, topic%></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago</td>
       </tr>
@@ -22,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= link_to 'New Topic', new_topic_path, :class => "btn btn-sm btn-success" %>

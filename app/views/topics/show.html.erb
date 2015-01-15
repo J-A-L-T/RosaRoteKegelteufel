@@ -19,7 +19,7 @@
   <%= @topic.content %>
 </p> -->
 <p>
-| <%= link_to 'Back', topics_path %> |
+<%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
 </p>
 <p>
   <strong><%= Tag.find_by_id(@topic.tag).name %><%= @topic.title %></strong>
@@ -35,7 +35,8 @@
   <%= @topic.content %>
 </p>
 
-| <%= link_to 'Edit', edit_topic_path(@topic) %> | <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Edit', edit_topic_path(@topic), :class=> 'btn btn-xs btn-default'%>
+<%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>
 
 <hr/> 
 
@@ -48,10 +49,10 @@
 
   <div class="field">
     <%= f.label "Comment" %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :class => "form-control", :rows => "5"%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+  <%= f.submit "Create Topic", class: "btn btn-sm btn-success" %>
   </div>
 <% end %>
 
