@@ -15,17 +15,18 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
 <div class="field">
   <%= f.label :Tag %><br>
-  <%= f.collection_select :tag_id, Tag.all, :id, :name, { selected: @topic.tag_id }, multiple: false %>
-  </div>
+  <%= f.collection_select :tag_id, Tag.all, :id, :name, { selected: @topic.tag_id }, multiple: false, :class => "form-control" %>
+</div>
   <div class="field">
     <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :class => "form-control", :rows => "5"%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+  <%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
+  <%= f.submit "Create Topic", class: "btn btn-sm btn-success" %>
   </div>
 <% end %>

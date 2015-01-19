@@ -4,6 +4,6 @@
 
 </p>
   <%= simple_format h(comment.body) %> 
-  <%= link_to 'Delete Comment', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>
 </div>
-<hr/> 
+<hr/>
