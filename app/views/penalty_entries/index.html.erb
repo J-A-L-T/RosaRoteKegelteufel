@@ -1,0 +1,30 @@
+<h1>Penalties</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>User</th>
+      <th>Penalty</th>
+      <th>Price</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @penalty_entries.each do |penalty_entry| %>
+      <tr>
+        <td><%= penalty_entry.date.strftime("%d/%m/%Y") %></td>
+        <td><%= User.find_by_id(penalty_entry.user).username %></td>
+        <td><%= Penalty.find_by_id(penalty_entry.penalty).name %></td>
+        <td><%= number_with_precision(Penalty.find_by_id(penalty_entry.penalty).price, :precision => 2) %> €</td>
+        <td><%= link_to 'Show', penalty_entry %></td>
+        <td><%= link_to 'Edit', edit_penalty_entry_path(penalty_entry) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Penalty entry', new_penalty_entry_path %>

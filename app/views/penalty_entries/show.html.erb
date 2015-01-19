@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @penalty_entry.user %>
+</p>
+
+<p>
+  <strong>Penalty:</strong>
+  <%= @penalty_entry.penalty %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @penalty_entry.date %>
+</p>
+
+<%= link_to 'Edit', edit_penalty_entry_path(@penalty_entry) %> |
+<%= link_to 'Back', penalty_entries_path %>

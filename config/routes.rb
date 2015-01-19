@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :penalty_entries
+
   resources :comments
 
   devise_for :users
