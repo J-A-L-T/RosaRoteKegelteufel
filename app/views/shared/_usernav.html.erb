@@ -1,5 +1,8 @@
 <ul class="nav navbar-nav">
 <li><%= link_to 'Forum', topics_path %></li>
+<li><%= link_to 'Gallery', "#" %></li>
+<li><%= link_to 'Calender', "#" %></li>
+
 </ul>
 <ul class="nav navbar-nav pull-right">
 <li class="dropdown">
@@ -8,6 +11,5 @@
 	<% if current_user %>
 		<li><%= link_to 'Change Password', edit_user_registration_path %></li>
 		<li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-        
     <% end %>
 </ul>
