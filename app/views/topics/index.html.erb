@@ -16,7 +16,7 @@
         <td>
           <%= render :partial => 'taglabels', :locals => {:tag_id => topic.tag_id}%>
         </td>
-        <td><%= topic.title %></td>
+        <td><%= link_to topic.title, topic_path(topic) %></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago</td>
       </tr>
       <% end%>

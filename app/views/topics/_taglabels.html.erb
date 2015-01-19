@@ -3,7 +3,7 @@
 <% elsif tag_id == 3 %>
 <span class = "label label-info">
 <% elsif tag_id == 4 %>
-<span class = "label label-success">
+<span class = "label label-warning">
 <%end%>
 <%= Tag.find_by_id(tag_id).name%>
 </span>
