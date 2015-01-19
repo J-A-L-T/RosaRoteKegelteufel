@@ -14,14 +14,7 @@
     <%= link_to topic do %>
       <tr data-link="<%= topic_path(topic) %>">
         <td>
-          <% if topic.tag_id == 2 %>
-          <span class = "label label-danger">
-          <% elsif topic.tag_id == 3 %>
-          <span class = "label label-info">
-          <% elsif topic.tag_id == 4 %>
-          <span class = "label label-success">
-          <%end%>
-          <%= Tag.find_by_id(topic.tag).name%></span>
+          <%= render :partial => 'taglabels', :locals => {:tag_id => topic.tag_id}%>
         </td>
         <td><%= topic.title %></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago</td>

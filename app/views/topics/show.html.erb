@@ -1,37 +1,9 @@
-<!-- <p>
-  <strong>User:</strong>
-<%= User.find_by_id(@topic.user_id).email %> 
-</p>
-
-<p>
-  <strong>Title:</strong>
-  [<%= Tag.find_by_id(@topic.tag).name %>] <%= @topic.title %>
-</p>
-
-<p>
-  <strong>Created:</strong>
-  <%= time_ago_in_words(@topic.created_at) %> ago
-</p>
-
-<p>
-  <strong>Content:</strong>
-  </br>
-  <%= @topic.content %>
-</p> -->
 <p>
 <%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
 </p>
 <p>
   <strong>
-  <% if @topic.tag_id == 2 %>
-          <span class = "label label-danger">
-          <% elsif @topic.tag_id == 3 %>
-          <span class = "label label-info">
-          <% elsif @topic.tag_id == 4 %>
-          <span class = "label label-success">
-          <%end%>
-          <%= Tag.find_by_id(@topic.tag).name%>
-          </span>
+          <%= render :partial => 'taglabels', :locals => {:tag_id => @topic.tag_id}%>
           <%= @topic.title %></strong>
 </p>
 <p>
