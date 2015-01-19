@@ -12,6 +12,12 @@ Tag.create name: 'Wichtig'
 Tag.create name: 'Umfrage'
 Tag.create name: 'Frage'
 
+# Strafen
+Penalty.create(name: '3 Getränke', :price => 0.5)
+Penalty.create(name: 'Gosse', :price => 1)
+Penalty.create(name: 'Nicht aufgeschrieben', :price => 1.5)
+Penalty.create(name: 'Geklingelt', :price => 2)
+
 #Testbenutzer
 usermail = "test@test.de"
 userpass = "12345678"
