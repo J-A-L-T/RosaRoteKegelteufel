@@ -22,7 +22,17 @@
 <%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
 </p>
 <p>
-  <strong><%= Tag.find_by_id(@topic.tag).name %><%= @topic.title %></strong>
+  <strong>
+  <% if @topic.tag_id == 2 %>
+          <span class = "label label-danger">
+          <% elsif @topic.tag_id == 3 %>
+          <span class = "label label-info">
+          <% elsif @topic.tag_id == 4 %>
+          <span class = "label label-success">
+          <%end%>
+          <%= Tag.find_by_id(@topic.tag).name%>
+          </span>
+          <%= @topic.title %></strong>
 </p>
 <p>
   by <%= User.find_by_id(@topic.user_id).email %> 
@@ -34,10 +44,10 @@
   </br>
   <%= @topic.content %>
 </p>
-
+<div  class = "btn-group">
 <%= link_to 'Edit', edit_topic_path(@topic), :class=> 'btn btn-xs btn-default'%>
 <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>
-
+</div>
 <hr/> 
 
 <%= render :partial => 'comment', :collection => @topic.comments %>
@@ -52,7 +62,7 @@
     <%= f.text_area :body, :class => "form-control", :rows => "5"%>
   </div>
   <div class="actions">
-  <%= f.submit "Create Topic", class: "btn btn-sm btn-success" %>
+  <%= f.submit "Create Comment", class: "btn btn-sm btn-success" %>
   </div>
 <% end %>
 

@@ -8,9 +8,9 @@
 
 # Tags für Topics
 Tag.create name: ''
-Tag.create name: '[Wichtig]'
-Tag.create name: '[Umfrage]'
-Tag.create name: '[Frage]'
+Tag.create name: 'Wichtig'
+Tag.create name: 'Umfrage'
+Tag.create name: 'Frage'
 
 #Testbenutzer
 usermail = "test@test.de"
@@ -37,6 +37,14 @@ topic_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
 Topic.create(user_id: topic_user_id, title: topic_title, tag_id: topic_tag_id, content: topic_content)
 puts "Testtopics erstellt"
 puts "-------------------------------"
+
+#Testtopic 3
+topic_user_id = 1
+topic_title = "Dies ist ein Umfragetopic"
+topic_tag_id = 3
+topic_content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+Topic.create(user_id: topic_user_id, title: topic_title, tag_id: topic_tag_id, content: topic_content)
+
 
 #Testcomment 1
 comment_topic_id = 2

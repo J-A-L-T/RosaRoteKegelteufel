@@ -1,4 +1,4 @@
-<h1>Listing topics</h1>
+<h1>Forum</h1>
 
 <table <table class="table table-hover table table-striped">
   <thead>
@@ -15,15 +15,13 @@
       <tr data-link="<%= topic_path(topic) %>">
         <td>
           <% if topic.tag_id == 2 %>
-          <span class = "btn btn-xs btn-danger disabled">
+          <span class = "label label-danger">
           <% elsif topic.tag_id == 3 %>
-          <span class = "btn btn-xs btn-info disabled">
+          <span class = "label label-info">
           <% elsif topic.tag_id == 4 %>
-          <span class = "btn btn-xs btn-success disabled">
+          <span class = "label label-success">
           <%end%>
-
-          <%= link_to Tag.find_by_id(topic.tag).name, topic%>
-          </span>
+          <%= Tag.find_by_id(topic.tag).name%></span>
         </td>
         <td><%= topic.title %></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago</td>
@@ -33,6 +31,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Topic', new_topic_path, :class => "btn btn-sm btn-success" %>
+<p><%= link_to 'New Topic', new_topic_path, class: "btn btn-sm btn-success " %></p>
