@@ -10,6 +10,7 @@
   <tbody>
     <% @galleries.each do |gallery| %>
       <tr>
+        <td><%= image_tag gallery.file.url(:medium) %></td>
         <td><%= link_to 'Show', gallery %></td>
         <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
         <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>

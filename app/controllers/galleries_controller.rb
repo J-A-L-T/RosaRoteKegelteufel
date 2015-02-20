@@ -42,6 +42,6 @@ class GalleriesController < ApplicationController
     end
 
     def gallery_params
-      params[:gallery]
+      params.require(:gallery).permit(:file)
     end
 end
