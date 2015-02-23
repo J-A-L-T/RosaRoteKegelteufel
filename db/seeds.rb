@@ -11,8 +11,8 @@ Tag.create name: ''
 Tag.create name: 'Wichtig'
 Tag.create name: 'Umfrage'
 Tag.create name: 'Frage'
-puts "Tags erstellt"
 puts "-------------------------------"
+puts "Tags erstellt"
 #Testbenutzer
 usermail = "test@test.de"
 userpass = "12345678"
