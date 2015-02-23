@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
   ActiveAdmin.routes(self)
-  resources :comments
 
   devise_for :users
   resources :topics
+  resources :comments
 
   devise_scope :user do
     authenticated :user do

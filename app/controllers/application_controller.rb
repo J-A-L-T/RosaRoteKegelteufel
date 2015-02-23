@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
     current_user && current_user.has_role?(:admin)
   end
 
+  def require_permission
+    if not current_user.has_role?(:admin)
+      redirect_to :authenticated_root
+    end
+  end
+
   # Catching exceptions from Cancan
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to :authenticated_root, alert: exception.message

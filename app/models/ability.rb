@@ -35,9 +35,8 @@ class Ability
         can :manage, :all
       else
         # Registered users
-        can :create, [Topic, Comment]
+        can  [:create, :read], [Topic, Comment]
         can [:update, :destroy], [Topic, Comment], :user_id => user.id
-        can :read, :all
       end
     end
   end
