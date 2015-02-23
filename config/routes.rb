@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
+  resources :galleries
+
+  resources :comments
 
   devise_for :users
   resources :topics

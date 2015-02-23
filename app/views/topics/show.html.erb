@@ -6,7 +6,7 @@
   <%= @topic.content %>
 </p>
 <p>
- created <%= time_ago_in_words(@topic.created_at) %> ago by <strong><%= User.find_by_id(@topic.user_id).email %></strong>
+ created <%= time_ago_in_words(@topic.created_at) %> ago by <strong><%= User.find_by_id(@topic.user_id).username %></strong>
 <div  class = "btn-group">
 <%= link_to 'Edit', edit_topic_path(@topic), :class=> 'btn btn-xs btn-default'%>
 <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>

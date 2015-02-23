@@ -1,7 +1,7 @@
 <div class="comment">
 <blockquote>
   <p><%= simple_format h(comment.body) %></p>
-  <small><%= User.find_by_id(comment.user_id).email %></small>
+  <small><%= User.find_by_id(comment.user_id).username %></small>
   <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>
 </blockquote>
 </div>

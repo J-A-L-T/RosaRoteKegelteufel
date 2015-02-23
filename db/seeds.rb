@@ -21,7 +21,8 @@ Tag.create name: 'Frage'
 #Testbenutzer
 usermail = "test@test.de"
 userpass = "12345678"
-User.create(email: usermail, password: userpass,password_confirmation: userpass)
+username = "Testbenutzer"
+User.create(username: username, email: usermail, password: userpass,password_confirmation: userpass)
 puts "-------------------------------"
 puts "Testbenutzer erstellt"
 puts "Benutzer = " + usermail

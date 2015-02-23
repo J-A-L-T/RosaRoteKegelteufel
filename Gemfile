@@ -59,3 +59,5 @@ gem 'rolify'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'cancan'
 
+# Picture upload
+gem "paperclip", "~> 4.2"
