@@ -1,8 +1,10 @@
 <ul class="nav navbar-nav">
-<li><%= link_to 'Forum', topics_path %></li>
-<li><%= link_to 'Gallery', "#" %></li>
-<li><%= link_to 'Calender', "#" %></li>
-
+  <li><%= link_to 'Forum', topics_path %></li>
+  <li><%= link_to 'Gallery', "#" %></li>
+  <li><%= link_to 'Calender', "#" %></li>
+  <li><% if current_user.has_role?(:admin) %>
+        <%= link_to 'Dashboard', admin_dashboard_path %>
+    <% end %></li>
 </ul>
 <ul class="nav navbar-nav pull-right">
 <li class="dropdown">
@@ -12,4 +14,5 @@
 		<li><%= link_to 'Change Password', edit_user_registration_path %></li>
 		<li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
     <% end %>
+    </ul>
 </ul>
