@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
       ;flash[:notice] = 'Comment was successfully created.' 
       redirect_to(@comment.topic) 
     else 
-      flash[:notice] = "Error creating comment: #{@comment.errors}" 
+      ;flash[:alert] = @comment.errors.full_messages.to_sentence
       redirect_to(@comment.topic) 
     end 
   end 
