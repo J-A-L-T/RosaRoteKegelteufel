@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 20150220151409) do
     t.datetime "file_updated_at"
   end
 
+  create_table "penalties", force: true do |t|
+    t.string   "name"
+    t.decimal  "price",      precision: 4, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "penalty_entries", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "penalty_id"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "penalty_entries", ["penalty_id"], name: "index_penalty_entries_on_penalty_id"
+  add_index "penalty_entries", ["user_id"], name: "index_penalty_entries_on_user_id"
+
   create_table "tags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"

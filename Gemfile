@@ -48,5 +48,9 @@ gem 'less-rails'
 gem 'bootstrap-sass'       # should be already included
 gem 'bootswatch-rails'
 
+
 # Picture upload
 gem "paperclip", "~> 4.2"
+
+gem 'bootstrap-datepicker-rails'
+
