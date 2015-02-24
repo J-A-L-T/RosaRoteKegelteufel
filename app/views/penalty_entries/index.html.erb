@@ -1,0 +1,32 @@
+<h1>Penalty Log
+<% if params[:user_id] %>
+ for
+<%= User.find(params[:user_id]).username %>
+    <% end %>
+</h1>
+<p><%= link_to 'New Penalty entry', new_penalty_entry_path, class: "btn btn-sm btn-success " %></p>
+<table class="table table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>User</th>
+      <th>Penalty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @penalty_entries.each do |penalty_entry| %>
+      <tr>
+        <td><%= penalty_entry.date.strftime("%d/%m/%Y") %></td>
+        <td><%= User.find_by_id(penalty_entry.user).username %></td>
+        <td><%= Penalty.find_by_id(penalty_entry.penalty).name %></td>
+        <td><%= number_with_precision(Penalty.find_by_id(penalty_entry.penalty).price, :precision => 2) %> €</td>
+      </tr>
+    <% end %>
+    <tr class="active">
+      <td colspan="3">Summe</td>
+      <td><%= number_with_precision(@penalty_entries.joins(:penalty).sum("penalties.price"), :precision => 2) %> €</td>
+    </tr>
+  </tbody>
+</table>

@@ -61,3 +61,8 @@ gem 'cancan'
 
 # Picture upload
 gem "paperclip", "~> 4.2"
+
+# Picture upload
+gem "paperclip", "~> 4.2"
+
+gem 'bootstrap-datepicker-rails'

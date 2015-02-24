@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
+
   resources :galleries
+
+  resources :topics
+  resources :penalty_entries
+  get ':user_id', to: 'penalty_entries#index', as: 'user_penalty_entries'
 
   resources :comments
 
   devise_for :users
+
   resources :topics
   resources :comments
 
