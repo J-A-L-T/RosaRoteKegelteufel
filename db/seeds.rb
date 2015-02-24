@@ -22,12 +22,28 @@ Penalty.create(name: 'Geklingelt', :price => 2)
 usermail = "test@test.de"
 userpass = "12345678"
 username = "Testbenutzer"
-User.create(username: username, email: usermail, password: userpass,password_confirmation: userpass)
+User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
 puts "-------------------------------"
 puts "Testbenutzer erstellt"
 puts "Benutzer = " + usermail
 puts "Passwort = " + userpass
 puts "-------------------------------"
+usermail = "Jan@test.de"
+userpass = "12345678"
+username = "Jan"
+User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
+usermail = "Lukas@test.de"
+userpass = "12345678"
+username = "Lukas"
+User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
+usermail = "Andi@test.de"
+userpass = "12345678"
+username = "Andi"
+User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
+usermail = "Tobi@test.de"
+userpass = "12345678"
+username = "Tobi"
+User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
 
 #Testtopic 1
 topic_user_id = 1
