@@ -48,10 +48,6 @@ ActiveRecord::Schema.define(version: 20150220151409) do
     t.datetime "file_updated_at"
   end
 
-  create_table "roles", force: true do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
   create_table "penalties", force: true do |t|
     t.string   "name"
     t.decimal  "price",      precision: 4, scale: 2
@@ -59,8 +55,6 @@ ActiveRecord::Schema.define(version: 20150220151409) do
     t.datetime "updated_at"
   end
 
-  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
-  add_index "roles", ["name"], name: "index_roles_on_name"
   create_table "penalty_entries", force: true do |t|
     t.integer  "user_id"
     t.integer  "penalty_id"
@@ -71,6 +65,17 @@ ActiveRecord::Schema.define(version: 20150220151409) do
 
   add_index "penalty_entries", ["penalty_id"], name: "index_penalty_entries_on_penalty_id"
   add_index "penalty_entries", ["user_id"], name: "index_penalty_entries_on_user_id"
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+  add_index "roles", ["name"], name: "index_roles_on_name"
 
   create_table "tags", force: true do |t|
     t.string   "name"

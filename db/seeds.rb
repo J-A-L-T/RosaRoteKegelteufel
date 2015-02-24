@@ -5,12 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-#Erzeugen eines Admin-Nutzers
-pass = 12345678
-admin = User.create(email: 'admin@example.com', password: pass, password_confirmation: pass)
-admin.add_role :admin
-puts "Admin password is #{pass}"
 puts "-------------------------------"
 # Tags für Topics
 Tag.create name: ''
@@ -44,6 +38,13 @@ userpass = "12345678"
 username = "Tobi"
 User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
 puts "Benutzer erstellt"
+puts "-------------------------------"
+#Erzeugen eines Admin-Nutzers
+pass = 12345678
+admin = User.create(username: "Admin", email: 'admin@example.com', password: pass, password_confirmation: pass)
+admin.add_role :admin
+puts "Admin erstellt"
+puts "Admin Passwort ist #{pass}"
 puts "-------------------------------"
 #Strafeinträge
 PenaltyEntry.create(user_id: 1, penalty_id: 3, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
