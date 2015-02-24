@@ -34,7 +34,7 @@ class PenaltyEntriesController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render :new }
-        format.json { render json: @penalty_entry.errors, status: :unprocessable_entity }
+        ;flash[:alert] = @penalty_entry.errors.full_messages.to_sentence
       end
     end
   end
@@ -47,7 +47,7 @@ class PenaltyEntriesController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render :new }
-        format.json { render json: @penalty_entry.errors, status: :unprocessable_entity }
+        ;flash[:alert] = @penalty_entry.errors.full_messages.to_sentence
       end
     end
   end

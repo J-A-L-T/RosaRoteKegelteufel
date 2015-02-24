@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-
-  ActiveAdmin.routes(self)
+ActiveAdmin.routes(self)
 
   resources :galleries
 

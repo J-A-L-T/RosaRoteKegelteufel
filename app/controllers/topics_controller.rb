@@ -28,13 +28,14 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
-
-    if @topic.save 
-      ;flash[:notice] = 'Topic was successfully created.' 
-      redirect_to(@topic) 
-    else 
-      ;flash[:alert] = @topic.errors.full_messages.to_sentence
-      redirect_to(@topic) 
+    respond_to do |format|
+      if @topic.save
+        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
+        format.json { render :show, status: :ok, location: @topic }
+      else
+        format.html { render :new }
+        ;flash[:alert] = @topic.errors.full_messages.to_sentence
+      end
     end
   end
 
@@ -47,7 +48,7 @@ class TopicsController < ApplicationController
         format.json { render :show, status: :ok, location: @topic }
       else
         format.html { render :edit }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
+        ;flash[:alert] = @topic.errors.full_messages.to_sentence
       end
     end
   end
