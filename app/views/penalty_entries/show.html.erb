@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Date:</strong>
+  <%= @penalty_entry.date %>
+</p>
+
+<p>
   <strong>User:</strong>
-  <%= @penalty_entry.user %>
+  <%= User.find_by_id(@penalty_entry.user).username %>
 </p>
 
 <p>
   <strong>Penalty:</strong>
-  <%= @penalty_entry.penalty %>
+  <%= Penalty.find_by_id(@penalty_entry.penalty).name %>
 </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @penalty_entry.date %>
-</p>
 
 <%= link_to 'Edit', edit_penalty_entry_path(@penalty_entry) %> |
 <%= link_to 'Back', penalty_entries_path %>

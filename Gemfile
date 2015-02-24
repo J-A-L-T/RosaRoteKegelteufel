@@ -47,3 +47,5 @@ gem 'less-rails'
 
 gem 'bootstrap-sass'       # should be already included
 gem 'bootswatch-rails'
+
+gem 'bootstrap-datepicker-rails'
