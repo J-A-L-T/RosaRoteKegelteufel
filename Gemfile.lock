@@ -267,6 +267,8 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   bootstrap-datepicker-rails
+  bootstrap-datepicker-rails
+  activeadmin!
   bootstrap-sass
   bootswatch-rails
   cancan

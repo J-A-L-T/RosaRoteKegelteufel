@@ -55,12 +55,11 @@ gem 'less-rails'
 gem 'bootstrap-sass'       # should be already included
 gem 'bootswatch-rails'
 
+
 gem 'rolify'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'cancan'
 
-# Picture upload
-gem "paperclip", "~> 4.2"
 
 # Picture upload
 gem "paperclip", "~> 4.2"
