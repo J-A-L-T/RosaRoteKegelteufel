@@ -1,6 +1,11 @@
-<h1>Penalty Log</h1>
+<h1>Penalty Log
+<% if params[:user_id] %>
+ for
+<%= User.find(params[:user_id]).username %>
+    <% end %>
+</h1>
 
-<table class="table">
+<table class="table table table-striped">
   <thead>
     <tr>
       <th>Date</th>
@@ -21,9 +26,9 @@
         <td><%= link_to 'Edit', edit_penalty_entry_path(penalty_entry) %></td>
       </tr>
     <% end %>
-    <tr>
+    <tr class="active">
       <td colspan="3">Summe</td>
-      <td><%= number_with_precision(@penalty_entries.joins(:penalty).sum("penalties.price"), :precision => 2) %> €</td>
+      <td colspan="2"><%= number_with_precision(@penalty_entries.joins(:penalty).sum("penalties.price"), :precision => 2) %> €</td>
     </tr>
   </tbody>
 </table>

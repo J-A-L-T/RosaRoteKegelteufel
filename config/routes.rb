@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :topics
   resources :penalty_entries
+  get ':user_id', to: 'penalty_entries#index', as: 'user_penalty_entries'
 
   resources :comments
 
   devise_for :users
-  resources :topics
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

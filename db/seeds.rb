@@ -14,20 +14,11 @@ Tag.create name: 'Frage'
 
 # Strafen
 Penalty.create(name: '3 Getränke', :price => 0.5)
-Penalty.create(name: 'Gosse', :price => 1)
+Penalty.create(name: 'Gosse geworfen', :price => 1)
 Penalty.create(name: 'Nicht aufgeschrieben', :price => 1.5)
-Penalty.create(name: 'Geklingelt', :price => 2)
+Penalty.create(name: 'Am Band geklingelt', :price => 2)
 
 #Testbenutzer
-usermail = "test@test.de"
-userpass = "12345678"
-username = "Testbenutzer"
-User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
-puts "-------------------------------"
-puts "Testbenutzer erstellt"
-puts "Benutzer = " + usermail
-puts "Passwort = " + userpass
-puts "-------------------------------"
 usermail = "Jan@test.de"
 userpass = "12345678"
 username = "Jan"
@@ -45,6 +36,21 @@ userpass = "12345678"
 username = "Tobi"
 User.create(username: username, email: usermail, password: userpass, password_confirmation: userpass)
 
+#Strafeinträge
+PenaltyEntry.create(user_id: 1, penalty_id: 3, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 4, penalty_id: 1, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 2, penalty_id: 1, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 2, penalty_id: 2, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 2, penalty_id: 3, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 2, penalty_id: 4, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 1, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 2, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 3, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 4, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 1, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 2, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 3, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
+PenaltyEntry.create(user_id: 3, penalty_id: 4, :date => DateTime.strptime("23/02/2015", "%d/%m/%Y"))
 #Testtopic 1
 topic_user_id = 1
 topic_title = "Dies ist ein Testtopic"

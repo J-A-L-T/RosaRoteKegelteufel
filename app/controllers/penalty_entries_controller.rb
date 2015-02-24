@@ -3,10 +3,15 @@ class PenaltyEntriesController < ApplicationController
 
   respond_to :html
 
+  # GET /tours
+  # GET /tours.json
   def index
-    @penalty_entries = PenaltyEntry.all
-    respond_with(@penalty_entries)
-  end
+    @penalty_entries = if params[:user_id]
+               User.find(params[:user_id]).penalty_entries
+             else
+               PenaltyEntry.all
+             end
+    end
 
   def show
     respond_with(@penalty_entry)
