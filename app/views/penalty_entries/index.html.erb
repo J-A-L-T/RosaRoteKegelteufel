@@ -4,7 +4,7 @@
 <%= User.find(params[:user_id]).username %>
     <% end %>
 </h1>
-
+<p><%= link_to 'New Penalty entry', new_penalty_entry_path, class: "btn btn-sm btn-success " %></p>
 <table class="table table table-striped">
   <thead>
     <tr>
@@ -30,5 +30,3 @@
     </tr>
   </tbody>
 </table>
-
-<p><%= link_to 'New Penalty entry', new_penalty_entry_path, class: "btn btn-sm btn-success " %></p>
