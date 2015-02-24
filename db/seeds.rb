@@ -8,9 +8,9 @@
 
 # Tags für Topics
 Tag.create name: ''
-Tag.create name: 'Wichtig'
-Tag.create name: 'Umfrage'
-Tag.create name: 'Frage'
+Tag.create name: 'Important'
+Tag.create name: 'Poll'
+Tag.create name: 'Question'
 
 # Strafen
 Penalty.create(name: '3 Getränke', :price => 0.5)

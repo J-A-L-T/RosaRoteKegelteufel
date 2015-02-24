@@ -12,7 +12,6 @@
       <th>User</th>
       <th>Penalty</th>
       <th>Price</th>
-      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -23,16 +22,13 @@
         <td><%= User.find_by_id(penalty_entry.user).username %></td>
         <td><%= Penalty.find_by_id(penalty_entry.penalty).name %></td>
         <td><%= number_with_precision(Penalty.find_by_id(penalty_entry.penalty).price, :precision => 2) %> €</td>
-        <td><%= link_to 'Edit', edit_penalty_entry_path(penalty_entry) %></td>
       </tr>
     <% end %>
     <tr class="active">
       <td colspan="3">Summe</td>
-      <td colspan="2"><%= number_with_precision(@penalty_entries.joins(:penalty).sum("penalties.price"), :precision => 2) %> €</td>
+      <td><%= number_with_precision(@penalty_entries.joins(:penalty).sum("penalties.price"), :precision => 2) %> €</td>
     </tr>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Penalty entry', new_penalty_entry_path %>
+<p><%= link_to 'New Penalty entry', new_penalty_entry_path, class: "btn btn-sm btn-success " %></p>
