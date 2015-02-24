@@ -5,7 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 puts "-------------------------------"
+#Erzeugen eines Admin-Nutzers
+pass = 12345678
+admin = User.create(email: 'admin@example.com', password: pass, password_confirmation: pass)
+admin.add_role :admin
+puts "Admin password is #{pass}"
 # Tags für Topics
 Tag.create name: ''
 Tag.create name: 'Important'

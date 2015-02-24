@@ -39,7 +39,14 @@ gem 'spring',        group: :development
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+# gem 'debugger',
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'faker'
+end
 
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
@@ -48,4 +55,11 @@ gem 'less-rails'
 gem 'bootstrap-sass'       # should be already included
 gem 'bootswatch-rails'
 
+
 gem 'bootstrap-datepicker-rails'
+gem 'rolify'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'cancan'
+
+# Picture upload
+gem "paperclip", "~> 4.2"
