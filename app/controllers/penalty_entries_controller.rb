@@ -22,13 +22,29 @@ class PenaltyEntriesController < ApplicationController
 
   def create
     @penalty_entry = PenaltyEntry.new(penalty_entry_params)
-    @penalty_entry.save
-    respond_with(@penalty_entry)
+
+    respond_to do |format|
+      if @penalty_entry.save
+        format.html { redirect_to penalty_entries_url, notice: 'Penalty entry was successfully created.' }
+        format.json { head :no_content }
+      else
+        format.html { render :new }
+        format.json { render json: @penalty_entry.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
-    @penalty_entry.update(penalty_entry_params)
-    respond_with(@penalty_entry)
+  
+  respond_to do |format|
+      if @penalty_entry.update(penalty_entry_params)
+        format.html { redirect_to penalty_entries_url, notice: 'Penalty entry was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render :new }
+        format.json { render json: @penalty_entry.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
