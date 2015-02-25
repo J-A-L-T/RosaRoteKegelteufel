@@ -14,7 +14,19 @@ describe 'Sign in' do
       fill_in 'user_password', with: '12345678'
       click_button 'Sign in'
 
-      expect(page).to have_content user.username
+      expect(page).to have_content 'Signed in successfully.'
+    end
+
+    it 'allows to sign out' do
+      click_link 'Sign in'
+      fill_in 'user_email', with: user.email
+      fill_in 'user_password', with: '12345678'
+      click_button 'Sign in'
+
+      first('.dropdown').click_link user.username
+      click_link 'Log out'
+
+      expect(page).to_not have_content user.username
     end
   end
 end
