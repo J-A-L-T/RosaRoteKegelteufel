@@ -46,6 +46,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'faker'
+  gem 'capybara'
 end
 
 gem 'therubyracer'

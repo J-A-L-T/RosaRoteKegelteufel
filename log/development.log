@@ -51214,3 +51214,585 @@ Processing by PenaltyEntriesController#new as HTML
   [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
   Rendered shared/_usernav.html.erb (3.7ms)
 Completed 200 OK in 1224ms (Views: 1221.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-02-25 13:17:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (8.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (138.3ms)
+  Rendered shared/_visitornav.html.erb (6.9ms)
+Completed 200 OK in 9688ms (Views: 9584.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-02-25 13:17:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (22.6ms)
+  Rendered shared/_visitornav.html.erb (0.5ms)
+Completed 200 OK in 3709ms (Views: 3705.8ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.4ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+
+
+Started GET "/devise/sessions" for 127.0.0.1 at 2015-02-25 13:45:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/devise/sessions"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/builder.rb:138:in `call'
+  rack (1.5.2) lib/rack/urlmap.rb:65:in `block in call'
+  rack (1.5.2) lib/rack/urlmap.rb:50:in `each'
+  rack (1.5.2) lib/rack/urlmap.rb:50:in `call'
+  rack-test (0.6.2) lib/rack/mock_session.rb:30:in `request'
+  rack-test (0.6.2) lib/rack/test.rb:230:in `process_request'
+  rack-test (0.6.2) lib/rack/test.rb:57:in `get'
+  /home/we2/.rbenv/versions/2.1.2/lib/ruby/2.1.0/forwardable.rb:183:in `get'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:60:in `process'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:21:in `visit'
+  capybara (2.4.4) lib/capybara/rack_test/driver.rb:42:in `visit'
+  capybara (2.4.4) lib/capybara/session.rb:227:in `visit'
+  capybara (2.4.4) lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+  spec/models/register_spec.rb:5:in `block (2 levels) in <top (required)>'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:322:in `instance_exec'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:322:in `instance_exec'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:350:in `run'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:427:in `block in run'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:427:in `each'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:427:in `run'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:500:in `run'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:368:in `run_before_example'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:151:in `block in run'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:222:in `call'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:222:in `call'
+  rspec-rails (3.1.0) lib/rspec/rails/adapters.rb:72:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:322:in `instance_exec'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:322:in `instance_exec'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:380:in `execute_with'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:446:in `block (2 levels) in run'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:222:in `call'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:222:in `call'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:447:in `run'
+  rspec-core (3.1.7) lib/rspec/core/hooks.rb:500:in `run'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:331:in `with_around_example_hooks'
+  rspec-core (3.1.7) lib/rspec/core/example.rb:149:in `run'
+  rspec-core (3.1.7) lib/rspec/core/example_group.rb:490:in `block in run_examples'
+  rspec-core (3.1.7) lib/rspec/core/example_group.rb:486:in `map'
+  rspec-core (3.1.7) lib/rspec/core/example_group.rb:486:in `run_examples'
+  rspec-core (3.1.7) lib/rspec/core/example_group.rb:453:in `run'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:111:in `block (2 levels) in run_specs'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:111:in `map'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:111:in `block in run_specs'
+  rspec-core (3.1.7) lib/rspec/core/reporter.rb:53:in `report'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:107:in `run_specs'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:85:in `run'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:69:in `run'
+  rspec-core (3.1.7) lib/rspec/core/runner.rb:37:in `invoke'
+  rspec-core (3.1.7) exe/rspec:4:in `<top (required)>'
+  /home/we2/.rbenv/versions/2.1.2/bin/rspec:23:in `load'
+  /home/we2/.rbenv/versions/2.1.2/bin/rspec:23:in `<main>'
+
+
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.8ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (48.5ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (395.7ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-02-25 13:50:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (7.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (98.5ms)
+  Rendered shared/_visitornav.html.erb (1.3ms)
+Completed 200 OK in 5304ms (Views: 5168.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-02-25 13:50:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+  Rendered shared/_visitornav.html.erb (0.3ms)
+Completed 200 OK in 1848ms (Views: 1838.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-02-25 13:53:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+Completed 401 Unauthorized in 34ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-02-25 13:53:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (5.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (93.6ms)
+  Rendered shared/_visitornav.html.erb (6.4ms)
+Completed 200 OK in 6189ms (Views: 6156.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-02-25 13:59:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (8.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (96.9ms)
+  Rendered shared/_visitornav.html.erb (4.7ms)
+Completed 200 OK in 10678ms (Views: 10515.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/devise_bootstrap_views.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/twitter_bootstrap.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/datepicker3.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/galleries.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/penalty_entries.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:12 +0100
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:13 +0100
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:14 +0100
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/flash.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/per_page.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:15 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/galleries.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/penalty_entries.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/core.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.az.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bg.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bs.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ca.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cs.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cy.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.da.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.de.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.el.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.es.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.et.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.eu.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fa.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fi.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fo.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.gl.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.he.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hr.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hu.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hy.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.is.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ja.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ka.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kh.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:17 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kk.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kr.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lt.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lv.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.mk.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ms.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nb.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.no.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pl.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ro.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:18 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ru.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sk.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sl.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sq.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sv.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sw.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.th.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.tr.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ua.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.uk.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.vi.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-25 13:59:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-02-25 13:59:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+Completed 401 Unauthorized in 31ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-02-25 13:59:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (90.6ms)
+  Rendered shared/_visitornav.html.erb (1.6ms)
+Completed 200 OK in 6487ms (Views: 6410.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-02-25 14:00:03 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (23.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.9ms)
+  Rendered shared/_visitornav.html.erb (0.5ms)
+Completed 200 OK in 4044ms (Views: 4039.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-25 14:00:07 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rff1DuWuFJAie72VOq9p+nUMcCuHrSuSTR2txhhXbdw=", "user"=>{"email"=>"test@test.com", "username"=>"Testi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@test.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-25 13:00:07.498610"], ["email", "test@test.com"], ["encrypted_password", "$2a$10$/XLl.nzzvhd38UKfcT5.4erDt/PREgh47UxmOvTmWIObTjsziEgP."], ["updated_at", "2015-02-25 13:00:07.498610"], ["username", "Testi"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 6  [["current_sign_in_at", "2015-02-25 13:00:07.511654"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2015-02-25 13:00:07.511654"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-02-25 13:00:07.515075"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/topics
+Completed 302 Found in 377ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-02-25 14:00:07 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 6  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 6]]
+  [1m[35mTopic Load (0.4ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 2 LIMIT 1[0m
+  Rendered topics/_taglabels.html.erb (19.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 4 LIMIT 1[0m
+  Rendered topics/_taglabels.html.erb (2.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 3 LIMIT 1[0m
+  Rendered topics/_taglabels.html.erb (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered topics/index.html.erb within layouts/application (57.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 6]]
+  Rendered shared/_usernav.html.erb (9.2ms)
+Completed 200 OK in 4093ms (Views: 4014.3ms | ActiveRecord: 5.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
