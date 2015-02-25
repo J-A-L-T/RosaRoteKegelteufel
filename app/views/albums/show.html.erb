@@ -31,4 +31,13 @@
 
 <br>
 
-<%= link_to 'New Image', new_image_path %>
+<%= form_for Image.new do |f| %>
+<%= f.hidden_field :album_id, :value => @album.id %>
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
