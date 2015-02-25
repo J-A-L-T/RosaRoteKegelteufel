@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :images
+
+  resources :albums
+
   resources :events
 
   ActiveAdmin.routes(self)
   
-  resources :galleries
 
   resources :topics
   resources :penalty_entries

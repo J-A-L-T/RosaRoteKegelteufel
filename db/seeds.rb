@@ -99,3 +99,22 @@ comment_body = "Ja, echt nen super Ding!"
 Comment.create(user_id: comment_user_id, topic_id: comment_topic_id, body: comment_body)
 puts "Comments erstellt"
 puts "-------------------------------"
+
+Album.create(title: "Album Eins", description: "Dies ist das erste Album")
+Album.create(title: "Album Zwei", description: "Dies ist das zweite Album")
+Album.create(title: "Album Drei", description: "Dies ist das dritte Album")
+Album.create(title: "Album Vier", description: "Dies ist das vierte Album")
+
+Image.create(album_id: 1, title: "Bild 1" )
+Image.create(album_id: 1, title: "Bild 2" )
+Image.create(album_id: 1, title: "Bild 3" )
+Image.create(album_id: 1, title: "Bild 4" )
+Image.create(album_id: 2, title: "Bild 5" )
+Image.create(album_id: 2, title: "Bild 6" )
+Image.create(album_id: 2, title: "Bild 7" )
+Image.create(album_id: 3, title: "Bild 8" )
+Image.create(album_id: 3, title: "Bild 9" )
+
+
+
+
