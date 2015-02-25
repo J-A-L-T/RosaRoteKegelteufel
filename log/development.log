@@ -80031,3 +80031,6 @@ Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015
 
 
 Started GET "/assets/favicon.ico" for 127.0.0.1 at 2015-02-24 16:46:45 -0700
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."topic_id" = 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."topic_id" = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."topic_id" = 2[0m
