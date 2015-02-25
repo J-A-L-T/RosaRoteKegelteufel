@@ -50,3 +50,4 @@ gem 'bootswatch-rails'
 
 # Picture upload
 gem "paperclip", "~> 4.2"
+

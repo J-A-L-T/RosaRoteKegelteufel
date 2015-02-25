@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220114202) do
+ActiveRecord::Schema.define(version: 20150222170012) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 20150220114202) do
   add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-  create_table "galleries", force: true do |t|
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "file_file_name"
-    t.string   "file_content_type"
-    t.integer  "file_file_size"
-    t.datetime "file_updated_at"
   end
 
   create_table "tags", force: true do |t|
