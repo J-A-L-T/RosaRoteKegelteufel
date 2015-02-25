@@ -1,5 +1,6 @@
 
-<%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%><h2><%= @topic.title %></h2>
+<%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
+<h2><%= @topic.title %></h2>
 
 <p>
   <%= @topic.content %>
@@ -22,7 +23,7 @@
 
   <p class="field">
     <%= f.label "Comment" %><br>
-    <%= f.text_area :body, :class => "form-control", :rows => "5" %>
+    <%= f.text_area :body, :class => "form-control", :rows => "5"%>
   </p>
   <p class="actions">
   <%= f.submit "Create Comment", class: "btn btn-sm btn-success" %>
