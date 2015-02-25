@@ -37,6 +37,7 @@ class Ability
         # Registered users
         can  [:create, :read], [Topic, Comment]
         can [:update, :destroy], [Topic, Comment], :user_id => user.id
+        can :read, PenaltyEntry
       end
     end
   end
