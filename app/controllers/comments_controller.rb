@@ -1,4 +1,6 @@
-class CommentsController < ApplicationController 
+class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def create 
     @comment = Comment.new(comment_params) 
   
@@ -6,16 +8,18 @@ class CommentsController < ApplicationController
       ;flash[:notice] = 'Comment was successfully created.' 
       redirect_to(@comment.topic) 
     else 
-      flash[:notice] = "Error creating comment: #{@comment.errors}" 
+      ;flash[:alert] = @comment.errors.full_messages.to_sentence
       redirect_to(@comment.topic) 
     end 
   end 
   
   def destroy 
     @comment = Comment.find(params[:id]) 
-    @comment.destroy 
-  
-    redirect_to(@comment.topic) 
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to @comment.topic, notice: 'Comment was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end 
 
 

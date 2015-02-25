@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  penalty_id: 
+  date: 2015-01-19
+
+two:
+  user_id: 
+  penalty_id: 
+  date: 2015-01-19

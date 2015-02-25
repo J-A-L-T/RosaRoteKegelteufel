@@ -18,6 +18,7 @@
 //= require moment.min.js
 //= require fullcalendar.min.js
 //= require_tree .
+//= require bootstrap-datepicker
 
 jQuery(function($) {
 $("tr[data-link]").click(function() {
