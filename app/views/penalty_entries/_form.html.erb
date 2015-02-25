@@ -1,20 +1,12 @@
 <%= form_for(@penalty_entry) do |f| %>
-  <% if @penalty_entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@penalty_entry.errors.count, "error") %> prohibited this penalty_entry from being saved:</h2>
 
-      <ul>
-      <% @penalty_entry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 <div class="row form-inline">
+	<div class="form-group">
   <%= f.text_field :date, :value => Date.today.to_s, :class => "form-control", "data-provide" => 'datepicker', "data-date-format" => 'yyyy-mm-dd'%>
   <%= f.collection_select :user_id, User.all, :id, :username,{ selected: @penalty_entry.user_id}, multiple: false, :class => "form-control" %>
   <%= f.collection_select :penalty_id, Penalty.all, :id, :name, { selected: @penalty_entry.penalty_id}, multiple: false, :class => "form-control" %>
 
     <%= f.submit class: "btn btn-md btn-success" %>
+    </div>
     </div>
 <% end %>
