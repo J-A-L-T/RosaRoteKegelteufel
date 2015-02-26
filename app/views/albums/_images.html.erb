@@ -1,11 +1,12 @@
 <tr>
-	<td rowspan="2"><%= image_tag("http://img3.wikia.nocookie.net/__cb20121014114401/spongebob/images/b/b2/Spongebob_jpg_300x300_q85.jpg") %></td>
+	<td rowspan="2"><%= image_tag images.file.url(:medium)%></td>
 	<td><%= images.title %></td>
-	<tr>
+	</tr>
+<tr>
 	<td>
 	<div class = "btn-group pull-left"><%= link_to 'Edit', edit_image_path(images), :class=> 'btn btn-xs btn-default'%><%= link_to 'Destroy', images, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-xs btn-danger'%></td>
 	</div>
-	<tr>
+
 </tr>
 
 

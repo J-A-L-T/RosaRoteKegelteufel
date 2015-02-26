@@ -20,6 +20,7 @@
 //= require_tree .
 //= require bootstrap-datepicker
 
+
 jQuery(function($) {
 $("tr[data-link]").click(function() {
 window.location = this.dataset.link
