@@ -70283,3 +70283,31 @@ Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 16:06:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-26 23:35:21.106834"], ["description", "s4v1zc6lmdx0bq3cq7a3jow05le6s9ok1f3euok7hlduh54ez0fhot89preni3tvvatth38c5ee8dj8byktebso66jyttkcqa2dt63vvzug92d45kunw6qn7faycqsd7ujlqmz3fmbmo3iljweiyi8qgr0ch29mj7b3ti2xhvvxd6d1nyt5h5tiecrgejrh8i7tfiocafvpgivrronc0mc6mhc95ulp9lfnjm0g6lxqrhk2ibv50578sy6q0j5l"], ["title", "hpx95rwbhu"], ["updated_at", "2015-02-26 23:35:21.106834"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-26 23:35:58.510327"], ["description", "ogkj8eug4wio3sus24zeox8r0nqkd3wh7bgy9b1flvr7b5pzgunngxphwbiiu5s615p0ecr062esxqtq2rtdtqp0bbtbe5sh7jor5i9us3szev7o3qe8xy1f72e4bwqv90yvgfofv4zvaj5d2w5yuf0c1vccryli6t2on90dndsegrqikobwwq22q37ntzagamlqifar8oaudd53j5rob4cpyv23scpc6aibx2uij7xnoqkp41m55yk2cnxx2uu"], ["title", "mmq6r8v3f6"], ["updated_at", "2015-02-26 23:35:58.510327"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
