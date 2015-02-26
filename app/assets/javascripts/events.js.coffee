@@ -3,10 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 #
-$(document).on 'page:load', ->
+goCalendar = ->
   $("#calendar").fullCalendar( 
      events: '/events.json'
-     lang: 'de'
+     lang: 'en'
      editable: false
      theme: false
      header: 
@@ -15,6 +15,8 @@ $(document).on 'page:load', ->
       right: 'month,agendaWeek,agendaDay'
     
   )
-
+  
+$(document).on 'page:load', goCalendar
+$(document).ready goCalendar
 
 
