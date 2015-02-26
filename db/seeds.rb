@@ -100,7 +100,13 @@ Comment.create(user_id: comment_user_id, topic_id: comment_topic_id, body: comme
 puts "Comments erstellt"
 puts "-------------------------------"
 
+#Bilder
+# Album.create(description: "Dieses POKéMON bevorzugt heiße Lebensräume. Bei Regen dampft die Schwanzspitze von GLUMANDA.", title: "Glumanda / Glutexo / Glurak")
+# Album.create(description: "Dieses Pokémon kommt sehr lange ohne Nahrung aus. Die Knolle auf seinem Rücken speichert Solarenergie.", title: "Bisasam / Bisaknosp / Bisaflor")
+# Album.create(description: "Dieses Pokémon jagt mit einem Wasserstrahl. Bei Gefahr zieht es sich in seinen Panzer zurück.", title: "Shiggy / Shillock / Turtok")
 
+# Image.create(album_id: "1", title: "Glumanda", file: File.open("http://fc09.deviantart.net/fs70/i/2012/072/1/0/_004_glumanda___charmander_by_mrsjasminhardy-d4smf2i.png")
+# Image.create(album_id: "1", title: "Glumanda")
 
 
 
