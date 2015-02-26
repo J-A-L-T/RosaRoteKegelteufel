@@ -5,6 +5,7 @@
     <tr>
       <th>Tag</th>
       <th>Title</th>
+      <th>Comments</th>
       <th>Creator</th>
       <th>Created</th>
     </tr>
@@ -14,10 +15,10 @@
     <% @topics.each do |topic| %>
     <%= link_to topic do %>
       <tr data-link="<%= topic_path(topic) %>">
-        <td>
-          <%= render :partial => 'taglabels', :locals => {:tag_id => topic.tag_id}%>
-        </td>
+        <td><%= render :partial => 'taglabels', :locals => {:tag_id => topic.tag_id}%></td>
         <td><%= link_to topic.title, topic_path(topic) %></td>
+        <td><span class="badge">
+        <%= Comment.where(topic: topic).count %></span></td>
         <td><%= User.find_by_id(topic.user_id).username %></td>
         <td><%= time_ago_in_words(topic.created_at) %> ago</td>
       </tr>

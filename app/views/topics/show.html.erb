@@ -1,12 +1,11 @@
 
-<%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%>
-<%= render :partial => 'taglabels', :locals => {:tag_id => @topic.tag_id}%><h2><%= @topic.title %></h2>
+<%= link_to 'Back', topics_path, :class=> 'btn btn-sm btn-default'%><h2><%= @topic.title %></h2>
 
 <p>
   <%= @topic.content %>
 </p>
 <p>
- created <%= time_ago_in_words(@topic.created_at) %> ago by <strong><%= User.find_by_id(@topic.user_id).username %></strong>
+<%= render :partial => 'taglabels', :locals => {:tag_id => @topic.tag_id}%><span>&nbspcreated</span> <%= time_ago_in_words(@topic.created_at) %> ago by <strong><%= User.find_by_id(@topic.user_id).username %></strong>
 <div  class = "btn-group">
 <%= link_to 'Edit', edit_topic_path(@topic), :class=> 'btn btn-xs btn-default'%>
 <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger'%>

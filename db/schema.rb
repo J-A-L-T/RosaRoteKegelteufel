@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150220151409) do
+ActiveRecord::Schema.define(version: 20150222170012) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -40,35 +39,18 @@ ActiveRecord::Schema.define(version: 20150220151409) do
   add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-  create_table "penalties", force: true do |t|
-    t.string   "name"
-    t.decimal  "price",      precision: 4, scale: 2
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "penalty_entries", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "penalty_id"
-    t.date     "date"
-
-  create_table "galleries", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "file_file_name"
-    t.string   "file_content_type"
-    t.integer  "file_file_size"
-    t.datetime "file_updated_at"
   end
 
   create_table "penalties", force: true do |t|
     t.string   "name"
     t.decimal  "price",      precision: 4, scale: 2
-
-  create_table "roles", force: true do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -92,10 +74,6 @@ ActiveRecord::Schema.define(version: 20150220151409) do
     t.datetime "updated_at"
   end
 
-
-  add_index "penalty_entries", ["penalty_id"], name: "index_penalty_entries_on_penalty_id"
-  add_index "penalty_entries", ["user_id"], name: "index_penalty_entries_on_user_id"
-  
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
