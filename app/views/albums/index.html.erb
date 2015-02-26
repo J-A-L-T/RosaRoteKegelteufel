@@ -1,41 +1,33 @@
 <div class="col-lg-8">
-<h1>Albums</h1>
+  <h1>Albums</h1>
 
-<table class="table">
-<!--   <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead> -->
+  <table class="table">
+    <!--   <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Description</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead> -->
 
-  <tbody>
+    <tbody>
     <% @albums.each do |album| %>
-      <tr>
-        <td rowspan="3"><%= link_to 'Platzhalter für das ' + album.title, album %></td>
-        <td><%= album.title %></td>
-      </tr>
-      <tr>
-        <% if @albums.length == 1 %>
-            <td><%= image_tag ("http://img3.wikia.nocookie.net/__cb20121014114401/spongebob/images/b/b2/Spongebob_jpg_300x300_q85.jpg")%></td>
-        <% else if @albums.length == 2%>
-            <td></td>
-        <% else %>
-            <td><%= image_tag("http://mystreet7.com/wp-content/uploads/2012/07/empty-folder-logo.png") %></td>
-            <% end %>
-        <td><%= album.description %></td>
-      </tr>
-      <tr>
-      <td colspan="2">
-          <div class = "btn-group pull-left"><%= link_to 'Edit', edit_album_path(album), :class=> 'btn btn-xs btn-default'%> <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger' %>
-          </div>
-        </td>
+        <tr>
+          <td rowspan="3"><%= link_to 'Platzhalter für das ' + album.title, album %></td>
+          <td><%= album.title %></td>
+        </tr>
+        <tr>
+          <td><%= album.description %></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class = "btn-group pull-left"><%= link_to 'Edit', edit_album_path(album), :class=> 'btn btn-xs btn-default'%> <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-xs btn-danger' %>
+            </div>
+          </td>
         </tr>
     <% end %>
-  </tbody>
-</table>
-<p><%= link_to 'New Album', new_album_path, class: "btn btn-sm btn-success " %></p>
+    </tbody>
+  </table>
+  <p><%= link_to 'New Album', new_album_path, class: "btn btn-sm btn-success " %></p>
 </div>
-
