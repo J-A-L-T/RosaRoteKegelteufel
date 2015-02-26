@@ -18,7 +18,14 @@
         <td><%= album.title %></td>
       </tr>
       <tr>
-      <td><%= album.description %></td>
+        <% if @albums.length == 1 %>
+            <td><%= image_tag ("http://img3.wikia.nocookie.net/__cb20121014114401/spongebob/images/b/b2/Spongebob_jpg_300x300_q85.jpg")%></td>
+        <% else if @albums.length == 2%>
+            <td></td>
+        <% else %>
+            <td><%= image_tag("http://mystreet7.com/wp-content/uploads/2012/07/empty-folder-logo.png") %></td>
+            <% end %>
+        <td><%= album.description %></td>
       </tr>
       <tr>
       <td colspan="2">
