@@ -10,7 +10,7 @@
  			<% end %>
           </ul>
         </li>
-<li><%= link_to 'Gallery', "#" %></li>
+<li><%= link_to 'Albums', albums_path %></li>
 <li><%= link_to 'Calender', events_path %></li>
 <li><% if current_user.has_role?(:admin) %>
       <%= link_to 'Dashboard', admin_dashboard_path %>

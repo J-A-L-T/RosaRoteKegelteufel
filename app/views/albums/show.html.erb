@@ -1,0 +1,32 @@
+<div class="col-lg-8">
+<%= link_to 'Back', albums_path, :class=> 'btn btn-sm btn-default'%>
+<h2><%= @album.title %></h2>
+
+<p>
+  <%= @album.description %>
+</p>
+
+<table class="table">
+  <tbody>
+  <%= render :partial => 'images', :collection => @album.images %>
+  </tbody>
+</table>
+
+
+<div class="form-group">
+<%= form_for Image.new do |f| %>
+<%= f.hidden_field :album_id, :value => @album.id %>
+<p class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title, :class => "form-control"%>
+</p>
+<p class="field">
+    <%= f.label :image %>
+    <%= f.file_field :file %>
+  </p>
+<p class="actions">
+  <%= f.submit "Submit image", class: "btn btn-sm btn-success" %>
+  </p>
+  <% end %>
+    </div>
+    </div>
