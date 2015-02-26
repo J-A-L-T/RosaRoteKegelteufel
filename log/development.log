@@ -56152,3 +56152,141 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 13:43:05.304076"], ["name", "Important"], ["updated_at", "2015-02-26 13:43:05.304076"]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sarai.grady@predovicemard.name' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 13:54:19.298321"], ["email", "sarai.grady@predovicemard.name"], ["encrypted_password", "$2a$10$Br9djBLe1voiJqGsdvYZte1AATlXKC.PyScmH2ZygBKunSb2N6ZKK"], ["updated_at", "2015-02-26 13:54:19.298321"], ["username", "Penelope Dietrich"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'margarete@lang.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 13:54:19.390656"], ["email", "margarete@lang.info"], ["encrypted_password", "$2a$10$Tcg5uiRS.K/no1O7HnAw6uaJ14JFXzGSHK5T.Jxu4xnw6bcifhX7S"], ["updated_at", "2015-02-26 13:54:19.390656"], ["username", "Mrs. Braeden Quitzon"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 13:54:19.397860"], ["name", "Important"], ["updated_at", "2015-02-26 13:54:19.397860"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "hzp6nzwhsplfodml47dujtj19zjiz2ngzll17x3s9d1uxhk2udp51gdpyh0are5e3q99ltonygfykvyl76tm71kwz7xp791sgwlwbhrub1jo2acjxrx667a87xfi742tksag78dslscl5019o9tr1zbg5zta33rip24alnvoj920f003cccxu8xl60hwpv4l7iif6r74mg86a55qmtiwzc40gs7bocm7s1t03riu1r54l1jhuevj9g6pxjd3hjc"], ["created_at", "2015-02-26 13:54:19.406083"], ["tag_id", 5], ["title", "3jb2s0k7oj"], ["updated_at", "2015-02-26 13:54:19.406083"], ["user_id", 7]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "topic_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", "fd1uuzme0sq7ju2uj8ohajqpgunhrlah4eh61qpvbkxo032d4zbk82uu1ir8s86quqoknjwlqh6ct6q164zumir2xzpz23zwh26cr1zqb6i6pbgkv3qvxbudquxn3syea8dn1rnc5jbgi1vf1zvf4j2yrm0nb7f5v85sd3cv8ojqphx4x1zf4qmewdppo7ys1uf0d70ntfb4t0b2l563w0u3rzhszk1oqazhbxawkavslu9ccfpo5esn4fu0myv"], ["created_at", "2015-02-26 13:54:19.413128"], ["topic_id", 4], ["updated_at", "2015-02-26 13:54:19.413128"], ["user_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'tracy@klocko.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 13:54:19.553197"], ["email", "tracy@klocko.biz"], ["encrypted_password", "$2a$10$lQ0P9xahx4zJSO750SNZ2eWkMS821vHKqovY.HXMyBmqOuZb.sIsq"], ["updated_at", "2015-02-26 13:54:19.553197"], ["username", "Jordy Langworth"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jaylan@huelsmedhurst.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 13:54:19.635576"], ["email", "jaylan@huelsmedhurst.biz"], ["encrypted_password", "$2a$10$fxlKqiBDgZ.Xku3JG/euZ./pelZoITFcfc3c0FOnfnbFr7kzIrofy"], ["updated_at", "2015-02-26 13:54:19.635576"], ["username", "Roger Hauck"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 13:54:19.637278"], ["name", "Important"], ["updated_at", "2015-02-26 13:54:19.637278"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "a82gj2kcikv810z4pmts6g5lhm2jq3iyvr2t81pwj6fv9nydezjdh0e4s259j6czo0iv4wqchriz0gx33ecq8iuepy2k9fekbo1zki2aarrohp18s1thbfs9t6n59hk39bsv7a46qbkjkvrgrnnionoeryhiy2x9o2my0iqzka3tl16w9b0mhwa2xggkqxx7sflos42tbo2lkm2csq60okom81is23gbf28sivhczg2xrqyz67ut91s3fjztouy"], ["created_at", "2015-02-26 13:54:19.639292"], ["tag_id", 5], ["title", "4vbh1i33op"], ["updated_at", "2015-02-26 13:54:19.639292"], ["user_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nikki@bauchquigley.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 13:55:30.852488"], ["email", "nikki@bauchquigley.com"], ["encrypted_password", "$2a$10$J8AEBVEIAznnU8a6hsWwgugx1dsR8xNC/mNuaZKwIGmdmlo9NRe.u"], ["updated_at", "2015-02-26 13:55:30.852488"], ["username", "Abbey Christiansen"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lawrence.goyette@konopelski.biz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 13:55:31.043571"], ["email", "lawrence.goyette@konopelski.biz"], ["encrypted_password", "$2a$10$JKjVbV0kSweG33fVMuKl4ek6cLPA8vy1MdLxQfZVA4/6pVysC7Lxm"], ["updated_at", "2015-02-26 13:55:31.043571"], ["username", "Dr. Darrion Romaguera"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 13:55:31.051910"], ["name", "Important"], ["updated_at", "2015-02-26 13:55:31.051910"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "qi7vgjsg7zcb0cjbnc4hi7hqaj57y1rvmwrnu1l9whbk2bsreaxsjiuedsgg6ah32o796elt0kn8rafrmeewimu7eiejgie056fbk2rcct4h12sz759cjd1tzt9mem8kom0eible657nn5y7afi9g84q0a5p5z6zjs6zynqzg1b2uao5zvwly8zhi8afvthryabgicdu0at84oqrcryof1clkc45j4qttwzxa57fnwtxn672qnfzp8h412sfc8b"], ["created_at", "2015-02-26 13:55:31.060183"], ["tag_id", 5], ["title", "za065jo3e9"], ["updated_at", "2015-02-26 13:55:31.060183"], ["user_id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "topic_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", "7rygzw4abeugpy2oa9p786jay1wta6vzpmutpj88f8aqww8mlhwznaxvmu73hxghfjnwaa86zr4kme86iewr2cmyuj0xwcexe85in42iysf1amx92g35r51u5dnmoisftej380u9c8hr2fkwm0l6wefj4l3e1lvoymff42sif2rm3tf0wyc9qmyk5riygqkco9oy2kuhhpz1g4h4571lmmjb6a3wehcrxtnsifgfzlst5rww8a8qd241gq7o765"], ["created_at", "2015-02-26 13:55:31.067113"], ["topic_id", 4], ["updated_at", "2015-02-26 13:55:31.067113"], ["user_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'easton@bauch.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 13:55:31.203430"], ["email", "easton@bauch.com"], ["encrypted_password", "$2a$10$.mPQIaFhhkMSTj/zCNDtquy7xf.7dtBmbTLtekhVMoIvpvf5SBh1G"], ["updated_at", "2015-02-26 13:55:31.203430"], ["username", "Verna Monahan"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'audra.dickens@dietrich.org' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 13:55:31.285115"], ["email", "audra.dickens@dietrich.org"], ["encrypted_password", "$2a$10$Ege.E0VYcH9XyvhordLzAuYAWHc4f047npDk9S8MDs.2q/Cvt4lVe"], ["updated_at", "2015-02-26 13:55:31.285115"], ["username", "Ally Roberts V"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 13:55:31.287867"], ["name", "Important"], ["updated_at", "2015-02-26 13:55:31.287867"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "lgzqajyg143hnks49tc34bm2dketyj1qpm53bmveytsh80njeqzcd9y7qff523ytv5dano7sk47cqfeu75ayzpsv03h69vr32ng57w8m7od2jlg91j6thqk1btucghbrwbvlghgoou1l5coxv570aat60bk4u5x6sz3pl63gys9yfzimd2lo5m5e3zbqfi8iprpt93i3cz04t48j65yyixsy2gkvyc1fgww0r16hl91nwv5pxhk64szrwx6akvz"], ["created_at", "2015-02-26 13:55:31.289586"], ["tag_id", 5], ["title", "sre6rtcqlq"], ["updated_at", "2015-02-26 13:55:31.289586"], ["user_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'brionna.swaniawski@morarfeeney.org' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 14:00:37.334913"], ["email", "brionna.swaniawski@morarfeeney.org"], ["encrypted_password", "$2a$10$xzmpYWf50qs3IyHGAmd6wOrTK.vgEeIObSFofa5Y6rphojYN47Ewe"], ["updated_at", "2015-02-26 14:00:37.334913"], ["username", "Alberto Renner"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'piper_glover@bergstrom.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 14:00:37.478622"], ["email", "piper_glover@bergstrom.com"], ["encrypted_password", "$2a$10$O9Yk8VTeZoOomHFemBlM7.mMgb4FIaKWZArEIul5t95ASmJxQe7Ea"], ["updated_at", "2015-02-26 14:00:37.478622"], ["username", "Reilly Bartoletti"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 14:00:37.487956"], ["name", "Important"], ["updated_at", "2015-02-26 14:00:37.487956"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "5lqkwigqdnri59uesye4aq973xb1m7g7bsdqs19ra063gy75ez6jjzp4mi1592wckqrr1ayij0h243e16un2ede5cc6ryptc1i620nbmxyeopvp3xxw107fyj2h8lm885uvfp5pukm4d0m9kq2xwznv0b9nfzaf1f3w93kw0m27jn0u6el95h1vc24qrizp9qxxfyevqw3xorjfvja13rx4s6l33kwlgifpeiefi3uveb7q89372f6m7qvy8v4z"], ["created_at", "2015-02-26 14:00:37.494560"], ["tag_id", 5], ["title", "t9mfnd861r"], ["updated_at", "2015-02-26 14:00:37.494560"], ["user_id", 7]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "topic_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["body", "aqi46y94yk3zlxag43m0oxt1bqhqjj9etwa4fpt0u1kzs8ikv1qe0uwzp2pwg1i1ffltpgitjab34pnk45hcgbv8lnhhyhs7v5ai3izfrpltvv4dr2vn21be5nfe1lpnk3qx2bfx12iosr8tj7ga3an1k95vd8q0jg8avosa9zp854jq3smukff3nqetxqbhctucx2v2f9rbun5wbsb7qya5unm2ce049vr8da6353h4iy8k5z0qem222uc1lgu"], ["created_at", "2015-02-26 14:00:37.502714"], ["topic_id", 4], ["updated_at", "2015-02-26 14:00:37.502714"], ["user_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'isobel.bahringer@lockman.info' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:00:37.637755"], ["email", "isobel.bahringer@lockman.info"], ["encrypted_password", "$2a$10$KPBNc4R5TmliANee4B4sTubxIK6PRxoZNwK9rVs5NzqXG5UnCnAvO"], ["updated_at", "2015-02-26 14:00:37.637755"], ["username", "Brendon Ullrich"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'aiden_runte@torphy.org' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:00:37.722676"], ["email", "aiden_runte@torphy.org"], ["encrypted_password", "$2a$10$ztttnnbSlHctnHHyAF83reFdj5LYuqGjBThoqZWR7Iy6Y9QShIsLa"], ["updated_at", "2015-02-26 14:00:37.722676"], ["username", "Nyasia Kessler III"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 14:00:37.724708"], ["name", "Important"], ["updated_at", "2015-02-26 14:00:37.724708"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "b0l0p9eq9fu3zd1inksvbt5oltci0kmksfxyoo5kw966xgx9jg919kzzjuglpz1fh4cq9r1inlqgyjs16dvg7klhnw37czcwnsipb9mu0h80l4tym9yzz7xwl0wpdc8j7762r7bo8tsji5xgl7z07wfcf1dnimdm9uya5orvcdhxpxrecrd7zd0cfot82mh61qkhhjdv4rx6hvyillk07qd6aku7iyyof1j8ukj3jbdhzn816suf2sqefw8enum"], ["created_at", "2015-02-26 14:00:37.727090"], ["tag_id", 5], ["title", "iy5h2wohfr"], ["updated_at", "2015-02-26 14:00:37.727090"], ["user_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'aleen.rogahn@quigley.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:00:37.860154"], ["email", "aleen.rogahn@quigley.biz"], ["encrypted_password", "$2a$10$7bPkT5jHQqFsoAFBf.PVjOYoGVz4coxQz364xWomUYLQ43UkFIy0S"], ["updated_at", "2015-02-26 14:00:37.860154"], ["username", "Ms. Joseph Windler"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jailyn@yundt.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:00:37.944400"], ["email", "jailyn@yundt.biz"], ["encrypted_password", "$2a$10$aXjAT0qmHyIXpXrnImxTxO2NTqoNn1NFFWgptHeMqBWPkdkcZQTW2"], ["updated_at", "2015-02-26 14:00:37.944400"], ["username", "Pedro Lueilwitz"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 14:00:37.945861"], ["name", "Important"], ["updated_at", "2015-02-26 14:00:37.945861"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "mef798pqppgxx9oiic9iqiifpyulfhwqlmrpfhdbaod3y2pdnngp5gh5nslbsuzaa35rz7nz8wwtdvlkxqg6frrq1er3mnf3g3w32onfnj9q360aobwn47kxr8397qv8scp29xi97vtmnbwh7h9xmw60mgunhwqf026gxip0dvxjey7hzt1lwzufphdn0pdnw4y9hwwt42hvdpmy8y7xhtws5zobxmvndcidgg4659rcan1b32bdrfma42mm3aq"], ["created_at", "2015-02-26 14:00:37.947815"], ["tag_id", 5], ["title", "1ixgdyij7a"], ["updated_at", "2015-02-26 14:00:37.947815"], ["user_id", 7]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
