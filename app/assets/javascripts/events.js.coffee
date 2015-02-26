@@ -3,16 +3,18 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 #
-Calendar_Funktion = ->
-  $("#calendar").fullCalendar(
-   	 events: '/events.json'
-   	 theme: false
-   	 header: {
-   	 	left: 'prev,next today'
-   	 	center: 'title'
-   	 	right: 'month,agendaWeek,agendaDay'
-   	 }
-    editable: true
+
+calendarLoader = ->
+  $("#calendar").fullCalendar( 
+     events: '/events.json'
+     lang: 'de'
+     editable: false
+     theme: false
+     header: 
+      left: 'prev,next today'
+      center: 'title'
+      right: 'month,agendaWeek,agendaDay'
+    
   )
 
-window.onload = Calendar_Funktion
+window.onload = calendarLoader
