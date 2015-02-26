@@ -56290,3 +56290,57 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["content", "mef798pqppgxx9oiic9iqiifpyulfhwqlmrpfhdbaod3y2pdnngp5gh5nslbsuzaa35rz7nz8wwtdvlkxqg6frrq1er3mnf3g3w32onfnj9q360aobwn47kxr8397qv8scp29xi97vtmnbwh7h9xmw60mgunhwqf026gxip0dvxjey7hzt1lwzufphdn0pdnw4y9hwwt42hvdpmy8y7xhtws5zobxmvndcidgg4659rcan1b32bdrfma42mm3aq"], ["created_at", "2015-02-26 14:00:37.947815"], ["tag_id", 5], ["title", "1ixgdyij7a"], ["updated_at", "2015-02-26 14:00:37.947815"], ["user_id", 7]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'elisha_emard@schoen.org' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:48.906793"], ["email", "elisha_emard@schoen.org"], ["encrypted_password", "$2a$10$fucBV/cwmxuLHhx5NG.Yheo/c/K3drzOgSUYTwQrSxM3AkeVB2nX6"], ["updated_at", "2015-02-26 14:05:48.906793"], ["username", "Dr. Cassandre Halvorson"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 14:05:49.139515"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:49.139515"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "topics" ("content", "created_at", "tag_id", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "wic1wns9ff2wq89o3r8thzqexu0vctsl5789feyzqqgr16whlk7tchvsajp28y6c6v7umik87061i1zyeeoe4vm4zptfx8atbsp5p8yfy6gn2lyqd10b50q298kzy3rjk08ky2uiwhuh46f2hiqz81lsb4i7u9it9j8s7zw3ql0wpr3dk4hq5inovszz49anv4hjw35p2618egf0d7z4h800zrxi38m5blwu8ohxouk9dxbh08vyxnqteos60b2"], ["created_at", "2015-02-26 14:05:49.179040"], ["tag_id", 5], ["title", "clfoavevna"], ["updated_at", "2015-02-26 14:05:49.179040"], ["user_id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'michel.collier@schummkuhlman.biz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:49.516501"], ["email", "michel.collier@schummkuhlman.biz"], ["encrypted_password", "$2a$10$XsIG0gjqD/trq10ZytJVSeGk9DtuK4bCOxQFVHygDO2lgt/UbLeva"], ["updated_at", "2015-02-26 14:05:49.516501"], ["username", "Antwon Blick"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 14:05:49.522113"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:49.522113"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'harmony@kohlertremblay.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:05:49.851155"], ["email", "harmony@kohlertremblay.biz"], ["encrypted_password", "$2a$10$35kQDiX5ZKs6/S9jV0Ut/usgEflGfcoa7zl7t03nUudjoG.A/7DI2"], ["updated_at", "2015-02-26 14:05:49.851155"], ["username", "Russel Powlowski"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:49.855875"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:49.855875"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'arvilla@bashirian.org' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:50.142865"], ["email", "arvilla@bashirian.org"], ["encrypted_password", "$2a$10$tChY13/D//SJ7quupshz7.kxruywd77Mp/qq4U0r7wPBXiFsvUcyK"], ["updated_at", "2015-02-26 14:05:50.142865"], ["username", "Heidi Schinner"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-02-26 14:05:50.147485"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:50.147485"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'francesco.becker@fay.biz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-02-26 14:05:50.422350"], ["email", "francesco.becker@fay.biz"], ["encrypted_password", "$2a$10$aJbzyKoM4deVO4lZngcQpeu9J3S4BZe8frNAsiuXighW.OAZpNhQ6"], ["updated_at", "2015-02-26 14:05:50.422350"], ["username", "Arnold Osinski"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:50.425612"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:50.425612"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
