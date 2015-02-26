@@ -56344,3 +56344,1481 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-02-26 14:05:50.425612"], ["name", "Important"], ["updated_at", "2015-02-26 14:05:50.425612"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-26 23:47:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.8) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/we2/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/we2/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/we2/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvents (20150222170012)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "start_time" datetime, "end_time" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150222170012"]]
+  [1m[36m (21.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAlbums (20150225182449)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150225182449"]]
+  [1m[36m (31.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateImages (20150225183220)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "album_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150225183220"]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddAttachmentFileToImages (20150225230525)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "images" ADD "file_file_name" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "images" ADD "file_content_type" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "images" ADD "file_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "images" ADD "file_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150225230525"]]
+  [1m[35m (26.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (3.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_penalty_entries_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_penalty_entries_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_penalty_entries_on_penalty_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_penalty_entries_on_penalty_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+[0m
+  [1m[35m (2.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-26 23:48:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (4.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (8.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (119.2ms)
+  Rendered shared/_visitornav.html.erb (0.9ms)
+Completed 200 OK in 9520ms (Views: 9498.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/fullcalendar.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/devise_bootstrap_views.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter_bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/datepicker3.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/penalty_entries.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/fullcalendar-lang-all.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:45 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/flash.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/per_page.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:46 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/albums.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/penalty_entries.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.az.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bg.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bs.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ca.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cs.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cy.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.da.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.de.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.el.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.es.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.et.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.eu.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fa.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fi.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fo.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.gl.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.he.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hr.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hu.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hy.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.is.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ka.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ja.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kh.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kk.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kr.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lt.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lv.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.mk.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ms.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nb.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.no.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pl.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ro.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ru.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sk.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sl.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sq.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sv.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sw.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.th.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.tr.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ua.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.uk.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.vi.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:48:52 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-02-26 23:49:01 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dB4a7mgBDSsJUse9ECgA64t8uSdBMErtgTZR5DvWB2M=", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'admin@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (4.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 5[0m  [["current_sign_in_at", "2015-02-26 22:49:02.025813"], ["sign_in_count", 2], ["updated_at", "2015-02-26 22:49:02.036496"]]
+  [1m[35m (86.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 656ms (ActiveRecord: 95.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-26 23:49:02 +0100
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Processing by TopicsController#index as HTML
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 2 LIMIT 1
+  Rendered topics/_taglabels.html.erb (43.9ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."topic_id" = 1[0m
+  [1m[35mUser Load (3.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 4 LIMIT 1[0m
+  Rendered topics/_taglabels.html.erb (8.9ms)
+  [1m[35m (7.5ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."topic_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTag Load (3.6ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."id" = 3 LIMIT 1
+  Rendered topics/_taglabels.html.erb (7.2ms)
+  [1m[36m (5.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."topic_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered topics/index.html.erb within layouts/application (223.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  Rendered shared/_usernav.html.erb (23.2ms)
+Completed 200 OK in 7684ms (Views: 7441.3ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/fullcalendar.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/datepicker3.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/twitter_bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/devise_bootstrap_views.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/penalty_entries.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/fullcalendar-lang-all.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:11 +0100
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/flash.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/per_page.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:12 +0100
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/albums.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/penalty_entries.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.az.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bg.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bs.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ca.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cs.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cy.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.da.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.de.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.el.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.es.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.et.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.eu.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fa.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fi.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fo.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.gl.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.he.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hr.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hu.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hy.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.is.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ja.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ka.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kh.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kk.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kr.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lt.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lv.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.mk.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ms.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nb.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.no.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pl.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ro.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ru.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sk.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sl.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sq.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sv.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sw.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.th.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.tr.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ua.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.uk.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.vi.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:49:15 +0100
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2015-02-26 23:49:19 +0100
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (7.4ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/page/index.html.arb (5233.0ms)
+Completed 200 OK in 5311ms (Views: 5249.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at 2015-02-26 23:49:40 +0100
+Processing by Admin::AlbumsController#index as HTML
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mImage Load (1.6ms)[0m  SELECT "images".* FROM "images"
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1190.4ms)
+Completed 200 OK in 1281ms (Views: 1211.6ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2015-02-26 23:49:47 +0100
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "active_admin_comments"  WHERE "active_admin_comments"."namespace" = 'admin'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments"  WHERE "active_admin_comments"."namespace" = 'admin' LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.6ms)[0m  SELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments"   ORDER BY resource_type asc
+  [1m[36m (1.0ms)[0m  [1mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments"   ORDER BY author_type asc[0m
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1001.7ms)
+Completed 200 OK in 1088ms (Views: 1025.8ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/admin/comments?scope=all" for 127.0.0.1 at 2015-02-26 23:49:54 +0100
+Processing by Admin::CommentsController#index as HTML
+  Parameters: {"scope"=>"all"}
+  [1m[35mUser Load (5.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments"  WHERE "active_admin_comments"."namespace" = 'admin'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (8.7ms)[0m  [1mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments"   ORDER BY resource_type asc[0m
+  [1m[35m (0.6ms)[0m  SELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments"   ORDER BY author_type asc
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1145.3ms)
+Completed 200 OK in 1208ms (Views: 1156.1ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/admin/events" for 127.0.0.1 at 2015-02-26 23:50:01 +0100
+Processing by Admin::EventsController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (8.3ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events"  LIMIT 30 OFFSET 0) subquery_for_count
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1077.9ms)
+Completed 200 OK in 1175ms (Views: 1102.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/admin/topics" for 127.0.0.1 at 2015-02-26 23:50:06 +0100
+Processing by Admin::TopicsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (8.3ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "topics"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "topics"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "topics"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "topics"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mTopic Load (2.5ms)[0m  SELECT  "topics".* FROM "topics"   ORDER BY "topics"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mComment Load (4.5ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mUser Load (7.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTag Load (13.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1105.2ms)
+Completed 200 OK in 1195ms (Views: 1103.5ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/admin/user_comments" for 127.0.0.1 at 2015-02-26 23:50:14 +0100
+Processing by Admin::UserCommentsController#index as HTML
+  [1m[35mUser Load (6.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "comments"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "comments"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "comments"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT  "comments".* FROM "comments"   ORDER BY "comments"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (3.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mTopic Load (2.4ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1132.7ms)
+Completed 200 OK in 1214ms (Views: 1149.8ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/admin/penalty_entries" for 127.0.0.1 at 2015-02-26 23:50:29 +0100
+Processing by Admin::PenaltyEntriesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (1.2ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 5]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "penalty_entries"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "penalty_entries"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "penalty_entries"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "penalty_entries"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mPenaltyEntry Load (3.9ms)[0m  [1mSELECT  "penalty_entries".* FROM "penalty_entries"   ORDER BY "penalty_entries"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mPenalty Load (0.7ms)[0m  [1mSELECT "penalties".* FROM "penalties"[0m
+  Rendered /home/we2/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/bundler/gems/active_admin-ed1fbca8c64a/app/views/active_admin/resource/index.html.arb (1199.3ms)
+Completed 200 OK in 1281ms (Views: 1204.0ms | ActiveRecord: 22.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-02-26 23:50:36 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0RyrEqz65ZgWcphjYQHXhZfdb32wi3SzfPI7/A+ERTU="}
+  [1m[35mUser Load (11.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-26 23:50:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.7ms)
+  Rendered shared/_visitornav.html.erb (1.3ms)
+Completed 200 OK in 7101ms (Views: 7094.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/fullcalendar.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/devise_bootstrap_views.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/datepicker3.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/penalty_entries.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter_bootstrap.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/moment.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:44 +0100
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/fullcalendar.min.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/fullcalendar-lang-all.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:45 +0100
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/flash.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/per_page.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:46 +0100
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/albums.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/penalty_entries.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/core.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ar.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.az.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bg.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bs.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ca.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cs.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cy.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.da.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.de.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.el.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.es.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.et.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.eu.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fa.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fi.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fo.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.gl.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:48 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.he.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hr.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hu.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hy.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.is.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ja.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ka.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kh.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kk.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kr.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lt.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lv.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.mk.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ms.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nb.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:49 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.no.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pl.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ro.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ru.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sk.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sl.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sq.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sv.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sw.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.th.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.tr.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ua.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:50 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.uk.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.vi.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
+
+
+Started GET "/assets/bootstrap-datepicker/index.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 23:50:51 +0100
