@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'Back', @image.album, :class=> 'btn btn-sm btn-default'%>
+<h2><%= @image.title %></h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= @image.title %>
-</p>
+<%= image_tag @image.file.url(:large)%>
 
-<p>
-  <strong>Album:</strong>
-  <%= @image.album_id %>
-</p>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', @image.album %>
+
+

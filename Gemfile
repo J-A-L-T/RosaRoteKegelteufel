@@ -65,3 +65,4 @@ gem 'cancan'
 gem "paperclip", "~> 4.2"
 
 gem 'bootstrap-datepicker-rails'
+
