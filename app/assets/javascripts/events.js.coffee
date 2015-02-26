@@ -3,8 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 #
-
-calendarLoader = ->
+$(document).on 'page:load', ->
   $("#calendar").fullCalendar( 
      events: '/events.json'
      lang: 'de'
@@ -17,4 +16,5 @@ calendarLoader = ->
     
   )
 
-window.onload = calendarLoader
+
+
