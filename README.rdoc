@@ -13,7 +13,7 @@ Hier könnt ihr euch angucken, wie man die Readme formatiert: https://github.com
 * Ein User soll Kalender-Event editieren können, die er selber erstellt hat
 * Ein User soll Kalender-Event löschen können, die er selber erstellt hat
 * Ein Besucher soll sich registrieren können
-* Ein Besucher soll nur doe Sign In oder Sign Up Seite öffnen können
+* Ein Besucher soll nur die Sign In oder Sign Up Seite öffnen können
 * Ein User soll sich ein- und ausloggen können
 * Ein Admin soll Topics, User Comments, Events, Albums und Images über ein Dashboard verwalten können
 * Ein User soll nur auf das Dashboard zugreifen können, wenn er Admin ist
