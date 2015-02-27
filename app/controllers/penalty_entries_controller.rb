@@ -1,5 +1,6 @@
 class PenaltyEntriesController < ApplicationController
   before_action :set_penalty_entry, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   respond_to :html
 
