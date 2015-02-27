@@ -4,15 +4,17 @@
 #
 #
 goCalendar = ->
-  $("#calendar").fullCalendar( 
+  $("#calendar").fullCalendar(
      events: '/events.json'
      lang: 'en'
      editable: false
      theme: false
+     contentHeight: 600
      header: 
       left: 'prev,next today'
       center: 'title'
       right: 'month,agendaWeek,agendaDay'
+
     
   )
   
