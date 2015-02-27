@@ -1,6 +1,9 @@
 
 == README
 
+
+Hier könnt ihr euch angucken, wie man die Readme formatiert: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
 == Userstories
 * Ein User soll Alben mit Name und Beschreibung anlegen können
 * Ein User soll Alben bearbeiten und löschen können
@@ -24,3 +27,20 @@
 * Stetige Entwicklungsfortschritte
 * Gleichmäßige Beteiligung
 * Einhaltung von Rails-Standards
+
+== Gems außer RoR
+* rspec-rails
+* factory_girl_rails
+* guard-rspec
+* faker
+* capybara
+* therubyracer
+* twitter-bootstrap-rails
+* less-rails
+* bootstrap-sass
+* bootswatch-rails
+* rolify
+* activeadmin
+* cancan
+* paperclip
+* 'bootstrap-datepicker-rails'
