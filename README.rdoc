@@ -6,12 +6,22 @@ Hier könnt ihr euch angucken, wie man die Readme formatiert: https://github.com
 
 == Userstories
 * Ein User soll Alben mit Name und Beschreibung anlegen können
-* Ein User soll Alben bearbeiten und löschen können
+* Ein User soll Alben bearbeiten und löschen können, die er selber erstellt hat
 * Ein User soll einem Album ein oder mehrere Fotos mit Namen zuordnen können
-* Ein User soll ein Foto löschen können
+* Ein User soll ein Foto löschen können, dass er hochgeladen hat
 * Ein User soll Kalender-Event erstellen können
-* Ein User soll Kalender-Event editieren können
-* Ein User soll Kalender-Event löschen können
+* Ein User soll Kalender-Event editieren können, die er selber erstellt hat
+* Ein User soll Kalender-Event löschen können, die er selber erstellt hat
+* Ein Besucher soll sich registrieren können
+* Ein Besucher soll nur doe Sign In oder Sign Up Seite öffnen können
+* Ein User soll sich ein- und ausloggen können
+* Ein Admin soll Topics, User Comments, Events, Albums und Images über ein Dashboard verwalten können
+* Ein User soll nur auf das Dashboard zugreifen können, wenn er Admin ist
+* Ein User soll Themen erstellen können
+* Ein User soll Kommentare erstellen können
+* Ein User soll Themen bearbeiten und löschen können, die er selber angelegt hat
+* Ein User soll Kommentare bearbeiten und löschen können, die er selber angelegt hat
+
 
 
 == Bewertungskriterien
