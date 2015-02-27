@@ -14,7 +14,7 @@
     <tbody>
     <% @albums.each do |album| %>
         <tr>
-          <td rowspan="3"><%= link_to 'Platzhalter für das ' + album.title, album %></td>
+          <td rowspan="3"><%= link_to 'Platzhalter für ' + album.title + 's Titelbild', album %></td>
           <td><%= album.title %></td>
         </tr>
         <tr>
