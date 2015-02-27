@@ -7,6 +7,7 @@ goCalendar = ->
   $("#calendar").fullCalendar(
      events: '/events.json'
      lang: 'en'
+     defaultDate: '2015-02-12'
      editable: false
      theme: false
      contentHeight: 600
