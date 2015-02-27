@@ -70311,3 +70311,307 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-26 16:06:59
   [1m[35m (0.2ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-26 23:57:46.389866"], ["description", "fbreqoek92qv3cevk9ehqf197ngzbtdtzy4unou8vtbx3a9li69qj0emq6bnzcgv3x9gzggw165icisnblld7qs0pulqd7ff7vbswjut8d4y6kgzeuxc8kkgw94uqu61rkfesgr9a4wtojac49u5giz2cc4kg3pm3foqizu2ka8g9gexdw3g9bmzdabi0s0quul2lntvb9soac3bkkh03xohuub3raqqgbx8fmh5mm7ms8ep5r2bzxq92mif20t"], ["title", "15ftp3omo0"], ["updated_at", "2015-02-26 23:57:46.389866"]]
+  [1m[36m (1.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-119tryw.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-49sz5k.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-49sz5k.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-49sz5k.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-no4e5x.png'
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-26 23:57:47.578766"], ["description", "px0m1tf3qx880jqjx1c7ct3f5n66dugftp91sn4r1nnmcwgk25h0bqfdp8v54578h4hwh0xawya0ufkeo60quo4q4ykbz0qh5by7o2080lt5k5dztboh8heqhnubkbi6wov91af89bgewsylrlam5jk7hpqm867617le34hblz0p2qv5erkfevd3j76i5kvrzsctfm2iebf99dz1h41oet3b2h7mgytszoxcz73kr3bq0glnco84rwybmatcgp0"], ["title", "nix1eg5qlj"], ["updated_at", "2015-02-26 23:57:47.578766"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-h6s1gy.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-1n7qy2a.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-1n7qy2a.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-1n7qy2a.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-150s8jv.png'
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-26 23:57:48.304795"], ["description", "lmm8ft3nzorwchi2pu2rmisq3422gt6txq8lpivjoek0wqjf37hkt4b3mk1x0mnehhard4lklq1ues2uaar7izfx3gnvn874m8tmtmqbez32ghhb8j1qbuy7n529gi1mznnwxaie2iqzy0vg9jkr1nx719joqnotat294o0s18pz0vd6xkj6jeec8suwc9xuuao7di5i5ezcrmjbf9ntz4n0rn2rafg31top2tionj3c58pd3vz3de3xpkixlt1"], ["title", "5np6b59ng1"], ["updated_at", "2015-02-26 23:57:48.304795"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-11yoxyz.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-yu33yi.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-yu33yi.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-yu33yi.png[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4577-1gltvq0.png'
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:00:32.559765"], ["description", "a29kl6rhtuzq2iwvsews1pc936tc6k2mjy8mg7kmgs8qq9ujxa86zfrdozltr72rdazr1yhkrgtlifeb2tw5toqsezpxyjmq0s2ceboch2ifrqvshctscsr9suikw7s2vjlj5chk92kfes5pu81cgcsislec2ngh5p12gx0p04u38h2e8fgkmvcmmaj22shfglwfmm4xonwtmi79q7kpc9q1u9ki4yxfqa528p39qjb5cn3jdw33myzwztrpuwa"], ["title", "bqhclfm6qq"], ["updated_at", "2015-02-27 00:00:32.559765"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-27 00:00:32.653200"], ["description", "k4c79p5g9bz1zcsdgoiojtecyxa66q97x6q5dt0wafycph6c7sr85ho3gat4cjjl3g39w24hmalvjgp0rk7cbbz3byrbfrb5dhiu26r3b6ey14hurt0w66goklijpg97cntrxqaixqd4y027voy8lpvar9qkp8xdby4oixkeiklwkd0utuv2lq3hbwvwiz33lerrr3b0zcgfd8hhgq8jcujgal9fgjr68xo4p6tsz72itudensr3o9f80o34kk9"], ["title", "7zax7lz9c6"], ["updated_at", "2015-02-27 00:00:32.653200"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:00:32.659251"], ["description", "myl6l0qdib5evmnuedkhoibc2c77jzzzx0u3gczbi44wgwq9y2zwzhfdc6smbmmu8xj9iyz435zds8bgk6l71jdyfs0teugitikfsir9giv5sh21xciwmy2tt7ob24tv6zyuvfdrz3u4rnr72qpglnrmgwn0fv3qrxkgq6iaww877yi1szz2zdrjwm16qq1zmvaxbg0397wsbl0dehfk5934ctk4ki9h5dwqi4s6egu8tb3sk6zxfkqn72c1c2b"], ["title", "jy6jfkm8m9"], ["updated_at", "2015-02-27 00:00:32.659251"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:01:47.311813"], ["description", "y1qsjo2h1pnmvnnahc7nyfigd2po0sm5q3mzsyo6qtcpbolzzaifxrrycwtq14nqbhm3tsve26535ak9gnpwlptr2i8w59xc5hbevmbacqt3lgvrsi9je1uvduiwf24rykfsi4w3x676jgk801torq8hwkr4nqrbzy31yh4e9t0b81w8xmit9hh8uz4qpv9785kkw6awwmntw3ag1wpc4c28b0fwus3md1hfrqqq0ws8iwiwzpr1aspgcs5zcb0"], ["title", "miyu8awqpa"], ["updated_at", "2015-02-27 00:01:47.311813"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-4chyx0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-838zi2.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-838zi2.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-838zi2.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1f3wylq.jpg'
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-27 00:01:47.982509"], ["description", "opi4fvwebnq093qt76tvorce8bquawxarsfxa1xvl0g1to91vegw40zxiurgyd4yx93p43ckbvxn0z2o0iqrg0mbabjpb6s6jlbt7sfm99khq9apm7lq1ukfzh4hthhmeprmne8gj4vsl8ozw5lusxzr0vnpbouggkr4j0xkzuk4iv99hpdr3ugm9jxfu9jc32bt49nwp9odp0g9ztn4jqd7wpwteyef0bcubc35idt5htu494c08d390uxhaw5"], ["title", "76jl1jwr7x"], ["updated_at", "2015-02-27 00:01:47.982509"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1ek55lq.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-rxus99.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-rxus99.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-rxus99.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-10fsbzb.jpg'
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:01:48.384104"], ["description", "qlg3yr4jorq2ddlfbj4uxhrreg0szh3wvcwjzhb1gnl0mzswx3s44ppkk1guayeimlefye50pukf71eik8v97gaqs91lrnk5lvxhedjlwh46xoq7zv8x0h2a0y9rsue7bvob563st1g0963z411eh7lhnnseke99m457bd43puyox6kic4rswjq9o2d04rs4t5dbwrrds255sivbr1ikvtwq9kf35r6f4rw9a2pdlapwhty46kfh5e0y9xvqlz0"], ["title", "epmp64e6pb"], ["updated_at", "2015-02-27 00:01:48.384104"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-w0tdax.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1dsak77.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1dsak77.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1dsak77.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::Errors::CommandNotFoundError: Could not run the `identify` command. Please install ImageMagick.>
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-4670-1961bkn.jpg'
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:09:04.017162"], ["description", "h8qbn7kbyw1ee8imr33yu1fpwg903bin22msn49h7gge7b22lvkq51eka815kwauawxrv94svnql6caxrwqwkgjz200zg8smnu0g3y0467hzzfj7c2ugvq18w4k8oq8m19jalerubfegrxlayud99o0msk333yttwwfxzd6k7qf4fxcykqj1v4n9a1sd9zp50n10ceqa28ol5jdi3yszmmgi0px8ojvs4cqtzlade54gj07zserd5jg73d5n7ob"], ["title", "5mveruc55i"], ["updated_at", "2015-02-27 00:09:04.017162"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1oo1z20.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-183ygto'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-183ygto'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-cxeqcj'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-cxeqcj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-ikcv3p'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-zh9j7r20150227-6308-ikcv3p'
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-bguigu.jpg'
+Binary data inserted for `string` type on column `file_content_type`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "images" ("album_id", "created_at", "file_content_type", "file_file_name", "file_file_size", "file_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["album_id", 4], ["created_at", "2015-02-27 00:09:04.896822"], ["file_content_type", "image/jpeg"], ["file_file_name", "my-own-slug.jpg"], ["file_file_size", 1157], ["file_updated_at", "2015-02-27 00:09:04.400906"], ["title", "2skzavdjko"], ["updated_at", "2015-02-27 00:09:04.896822"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:09:04.987235"], ["description", "k3htr98sflgzea1ha2syiv8hcixhki494ehmp0rvg2gy2nnut95ylbz479xpc18fv338st3v767cqgnssiwoxwuba60d5f4llpvv94r06ci9b9931covdcus0yk8mthw50k9t6zhaclxiikj4zcpq6m3bqw90csbgpa5zgeeyiuhocvw2gzqt33n0ffirkf3mgk2rhf7pfw1wswh2llions5mic9u0rjxgscdras1uuyp8urdo7f4x6kxy89wzh"], ["title", "1gd08esq2v"], ["updated_at", "2015-02-27 00:09:04.987235"]]
+  [1m[36m (1.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1c0ankb.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-8tmrnz'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-8tmrnz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-xqq802'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-xqq802'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-8a8paa'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1atv0up20150227-6308-8a8paa'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1l5ui09.jpg'
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-27 00:09:05.744726"], ["description", "6uyidkbssjfdb0tprxuyknuq7bmu3krbrqfltze3k3nfoz2v5tyuruj5uuhbilpvtodab3ioel52cnzoqys6hqale0l1gh8vl9aiok6j3uxevlx48gysi9lmhno3uula9d3nems9aw09jr9cqrigwlmakgl321gs7tgt8v1ksr4novhkvv0nbfewake72ud4swoapttsinvvl0107tft39xkf2hvwet09fkdoaadxyigyyafizm0lgoxmsktwkm"], ["title", "snnke0tl4h"], ["updated_at", "2015-02-27 00:09:05.744726"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-d16uqo.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-1ircefe'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-1ircefe'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-1i4qlh2'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-1i4qlh2'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-uibxsa'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1a7yc1m20150227-6308-uibxsa'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6308-1h9e27m.jpg'
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:10:29.791383"], ["description", "su8gdih15n950zmlva3uj5plskjbggfchjz1o9wph4fpupio8rn22i945g34hesqrs1ahymsb47gsknpdkcmsas7etusj1sev0aoew7wq23wvojras7rvqmyrobz1nvof4y06iorcg3go87is8s9as3xer25yf1gzyezw51b1kyjdocwigtbaf170ghfdefhcoqsr6yyat6tjiw1iy4z5zjd033wanu4q6zrkuib06k0d2w5ftl2gc06tk9itbi"], ["title", "8yht8kwtvq"], ["updated_at", "2015-02-27 00:10:29.791383"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1xwf8nt.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1n1fqw8'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1n1fqw8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1jht2m1'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1jht2m1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1qwqibu'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-12c0rcj20150227-6430-1qwqibu'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-awbh76.jpg'
+Binary data inserted for `string` type on column `file_content_type`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "images" ("album_id", "created_at", "file_content_type", "file_file_name", "file_file_size", "file_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["album_id", 4], ["created_at", "2015-02-27 00:10:30.516061"], ["file_content_type", "image/jpeg"], ["file_file_name", "my-own-slug.jpg"], ["file_file_size", 1157], ["file_updated_at", "2015-02-27 00:10:30.109663"], ["title", "asf4tdf8pg"], ["updated_at", "2015-02-27 00:10:30.516061"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:10:30.613917"], ["description", "395gl6ent0dos9dppw8g1rjmqcvtget7hh8r2994wxschqs33eh2syjj9p9xzl9qqwsbpgk7bdbj3vycir7jqbqjsx3or7r94gn2qmuan2h6qatbbt11arw838a51k90g0yyrhs9rv6vnv7jai1otml70uevo2w3baumpgtmi65qssdha9p9w3lvvwxjxl1fwm0t3ajjcvhy3xp5q1shzjzgogo4eggahh5cg33aiuh9b5hy1jzp1jzfndkqtsa"], ["title", "ogol3p2prp"], ["updated_at", "2015-02-27 00:10:30.613917"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1mbndmz.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-uwqxbe'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-uwqxbe'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-1s9og59'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-1s9og59'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-1630gw5'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-xhct2d20150227-6430-1630gw5'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-beyqlc.jpg'
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-27 00:10:31.377574"], ["description", "yhe05of5ydbdm43mjw2olewfttfuhncv3u14stcgtclzl6ru4sgmnz7xaqzg9lp0ma556w3u4kwart59bf73z057fo1mkysgfa3zy10ri9vw2nsvjth4tx61kys1d3limk197c74wvh8rqpj5o0roeckkhm8ny29u7sd73myxdw6w4elpwfqi71vxl6kfkp9qcx8umqess36hhh93e40kyun8vwtc1g1o0u0c92th1buc36czwdm8w7rfxazv1j"], ["title", "7rsh0z1ixa"], ["updated_at", "2015-02-27 00:10:31.377574"]]
+  [1m[35m (1.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1vscqf8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-1e2bb3r'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-1e2bb3r'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-11hpi9v'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-11hpi9v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-sbc049'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-u3yqw20150227-6430-sbc049'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-atnadu.jpg'
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1qz5wxf.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-t98vud'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-t98vud'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-12i6b7f'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-12i6b7f'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-14x7qve'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1n7761q20150227-6430-14x7qve'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6430-1clqr14.jpg'
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:11:20.097494"], ["description", "xe56ojhqu5b4oeo3wpy3ypl0w9f4e2s5fi55xm9z7j1eogh8rqq2co9sm0mfowiagpchs5zt2lf4rxkfwuk9touwwbyoyhnjfk35serola9s8k8s7h6y0djr4jvuqsp85loesbu4ojwnbbaat67ygxkcmk28stapfu2kneyrw8z9kcdxc6knuu1cn065pm0zuqw5g8kgie6pbo8gkjawww4b2vjsextpbaqozypuaivff7pip6eg5ehnsyl92ar"], ["title", "v8w5cy4nxh"], ["updated_at", "2015-02-27 00:11:20.097494"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1fkytx2.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-to31ob'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-to31ob'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-61jdf9'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-61jdf9'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-cus3ua'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u6ztgx20150227-6605-cus3ua'
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-yibmxg.jpg'
+Binary data inserted for `string` type on column `file_content_type`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "images" ("album_id", "created_at", "file_content_type", "file_file_name", "file_file_size", "file_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["album_id", 4], ["created_at", "2015-02-27 00:11:20.844568"], ["file_content_type", "image/jpeg"], ["file_file_name", "my-own-slug.jpg"], ["file_file_size", 1157], ["file_updated_at", "2015-02-27 00:11:20.406776"], ["title", "88aiijkw0z"], ["updated_at", "2015-02-27 00:11:20.844568"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2015-02-27 00:11:20.883773"], ["description", "te2svwmfc2ws9987fcktwsw6ecnbd9jctksx9ddxe1gejx0qmdi775p38y6ovqo3t4tebbpvym5q9vsed713v2gqjff274wfww8mk9y92fggbo0pbs3u85vbiykxo1vrbzys54z1ip563q449e5wx4dwaddcv930b5x2pehmricxyexci0yr6cl6na1wbqos2k44xkatnpqske8l8w7uz7z23yr81s0zes4k13fi14zs3o5kqo3hns29cup1pkh"], ["title", "q2xrkmyezn"], ["updated_at", "2015-02-27 00:11:20.883773"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1re1r7j.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-61frco'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-61frco'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-1kuhndn'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-1kuhndn'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-1aznr2d'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-zu8yuu20150227-6605-1aznr2d'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1invdo4.jpg'
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "albums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-02-27 00:11:21.626682"], ["description", "iak6wj2y7gqlwyjp6vyat0qfber8llobf1tl06427mhgavksvs751smzhel8oepccuyhae6dw8sixa8pm3e0ddr312imj1lvaicbq253yvdpu4atlyp6mcoaefywdnttrfxcxpkudp825sv9bymsczjyigiqfze8gq38zf02c5s0w52suflfl4uqwr5pmxu3d8dxi3nz4aix6aw1hysq24dobotz58kym0bh9nninbsm0mrtfy0k7byic2gr63d"], ["title", "tvg22k1455"], ["updated_at", "2015-02-27 00:11:21.626682"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-5vm9l7.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' -auto-orient -resize "800x800>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-s3jgut'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-s3jgut'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' -auto-orient -resize "300x300>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-1y87ojt'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-1y87ojt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]'
+Command :: convert '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z.jpg[0]' -auto-orient -resize "150x150>" '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-1ruo8q2'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-dygw2z20150227-6605-1ruo8q2'
+Command :: file -b --mime '/tmp/4d3c92fe2b90ffad3b5c79cc410d9e0d20150227-6605-1u8f6ha.jpg'
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
