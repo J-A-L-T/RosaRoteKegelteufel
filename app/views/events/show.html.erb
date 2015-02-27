@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<button type="button" class="btn btn-sm btn-default"><%= link_to 'Back', events_path %></button>
+
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -20,5 +22,4 @@
   <%= @event.end_time %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<button type="button" class="btn btn-success btn-sm"><%= link_to 'Edit', edit_event_path(@event) %></button>
