@@ -6,11 +6,11 @@
     <% @albums.each do |album| %>
         <tr>
           <td rowspan="3"><%= link_to image_tag("http://png-1.findicons.com/files/icons/316/hyperion/128/blank.png"), album %></td>
-          <td><%= album.title %></td>
+          <td><%= link_to album.title, album%></td>
         </tr>
         <tr>
 
-          <td><%= album.description %></td>
+          <td><%= link_to album.description, album%></td>
         </tr>
         <tr>
           <td colspan="2">

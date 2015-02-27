@@ -1,9 +1,9 @@
 <tr>
-	<td rowspan="2"><%= link_to (image_tag images.file.url(:medium)), images %></td>
-	<td><%= images.title %></td>
+	<td rowspan="2" class="col-md-2"><%= link_to (image_tag images.file.url(:medium)), images %></td>
+	<td class="col-md-2"><%= images.title %></td>
 	</tr>
 <tr>
-	<td>
+	<td class="col-md-4">
 	<div class = "btn-group pull-left"><%= link_to 'Destroy', images, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-xs btn-danger'%></td>
 	</div>
 
