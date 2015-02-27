@@ -1,7 +1,7 @@
 
-# H1 README
+== README
 
-## Userstories
+== Userstories
 * Ein User soll Alben mit Name und Beschreibung anlegen können
 * Ein User soll Alben bearbeiten und löschen können, die er selber erstellt hat
 * Ein User soll einem Album ein oder mehrere Fotos mit Namen zuordnen können
@@ -25,7 +25,7 @@
 * User sollen sich Strafeinträge pro User anzeigen lassen können
 
 
-## Gems außer RoR
+== Gems außer RoR
 * rspec-rails
 * factory_girl_rails
 * guard-rspec
@@ -42,7 +42,7 @@
 * paperclip
 * bootstrap-datepicker-rails
 
-### Bewertungskriterien
+== Bewertungskriterien
 * Verwendung von git und Github
 * Freischaltung des Dozenten für Projekt (@malagant)
 * Aussagekräftige README anlegen mit Installationshinweisen (Versionsnummern von benutzten Komponenten)
