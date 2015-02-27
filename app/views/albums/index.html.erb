@@ -5,7 +5,7 @@
       <tbody>
     <% @albums.each do |album| %>
         <tr>
-          <td rowspan="3"><%= link_to 'Platzhalter für das ' + album.title, album %></td>
+          <td rowspan="3"><%= link_to image_tag("http://png-1.findicons.com/files/icons/316/hyperion/128/blank.png"), album %></td>
           <td><%= album.title %></td>
         </tr>
         <tr>
