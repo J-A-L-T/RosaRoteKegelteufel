@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Back', events_path, :class=> 'btn btn-sm btn-default'%>
+<%= link_to 'Edit', edit_event_path(@event), :class=> 'btn btn-sm btn-default'%>
+
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -19,6 +22,3 @@
   <strong>End time:</strong>
   <%= @event.end_time %>
 </p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>

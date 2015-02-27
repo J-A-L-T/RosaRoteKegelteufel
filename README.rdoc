@@ -1,28 +1,61 @@
+
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Hier könnt ihr euch angucken, wie man die Readme formatiert: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-* Ruby version
+== Userstories
+* Ein User soll Alben mit Name und Beschreibung anlegen können
+* Ein User soll Alben bearbeiten und löschen können, die er selber erstellt hat
+* Ein User soll einem Album ein oder mehrere Fotos mit Namen zuordnen können
+* Ein User soll ein Foto löschen können, dass er hochgeladen hat
+* Ein User soll Kalender-Event erstellen können
+* Ein User soll Kalender-Event editieren können, die er selber erstellt hat
+* Ein User soll Kalender-Event löschen können, die er selber erstellt hat
+* Ein Besucher soll sich registrieren können
+* Ein Besucher soll nur die Sign In oder Sign Up Seite öffnen können
+* Ein User soll sich ein- und ausloggen können
+* Ein User soll einen Usernamen haben
+* Ein Admin soll Topics, User Comments, Events, Albums und Images über ein Dashboard verwalten können
+* Ein User soll nur auf das Dashboard zugreifen können, wenn er Admin ist
+* Ein User soll Themen erstellen können
+* Ein User soll Kommentare erstellen können
+* Ein User soll Themen bearbeiten und löschen können, die er selber angelegt hat
+* Ein User soll Kommentare bearbeiten und löschen können, die er selber angelegt hat
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Bewertungskriterien
+* Verwendung von git und Github
+* Freischaltung des Dozenten für Projekt (@malagant)
+* Aussagekräftige README anlegen mit Installationshinweisen (Versionsnummern von benutzten Komponenten)
+* Einwandfreies Setup
+* Anlegen von Testdaten und Seeds
+* Planung und Dokumentation der User Stories
+* RSpec Tests für die Kernfunktionen
+* Heroku Deployment der Anwendung
+* Angemessene Komplexität (zeigt, was ihr könnt!)
+* Minimales CSS-/HTML-Design (z.B. Bootstrap)
+* Mindestens 6 Models mit Assoziationen (1:n, n:m)
+* Verwendung von mindestens 5 Gems (außer RoR)
+* Verwendung von Devise/Omniauth
+* Stetige Entwicklungsfortschritte
+* Gleichmäßige Beteiligung
+* Einhaltung von Rails-Standards
+
+== Gems außer RoR
+* rspec-rails
+* factory_girl_rails
+* guard-rspec
+* faker
+* capybara
+* therubyracer
+* twitter-bootstrap-rails
+* less-rails
+* bootstrap-sass
+* bootswatch-rails
+* rolify
+* activeadmin
+* cancan
+* paperclip
+* 'bootstrap-datepicker-rails'

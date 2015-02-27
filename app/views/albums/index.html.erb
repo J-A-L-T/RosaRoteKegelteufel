@@ -2,23 +2,15 @@
   <h1>Albums</h1>
 
   <table class="table">
-    <!--   <thead>
-        <tr>
-          <th></th>
-          <th>Title</th>
-          <th>Description</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead> -->
-
-    <tbody>
+      <tbody>
     <% @albums.each do |album| %>
         <tr>
-          <td rowspan="3"><%= link_to 'Platzhalter für das ' + album.title, album %></td>
-          <td><%= album.title %></td>
+          <td rowspan="3"><%= link_to image_tag("http://png-1.findicons.com/files/icons/316/hyperion/128/blank.png"), album %></td>
+          <td><%= link_to album.title, album%></td>
         </tr>
         <tr>
-          <td><%= album.description %></td>
+
+          <td><%= link_to album.description, album%></td>
         </tr>
         <tr>
           <td colspan="2">
