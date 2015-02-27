@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require turbolinks
-//= require jquery.min.js
 //= require moment.min.js
+//= require twitter/bootstrap
 //= require fullcalendar.min.js
+//= require fullcalendar-lang-all.js
+//= require turbolinks
 //= require_tree .
 //= require bootstrap-datepicker
 

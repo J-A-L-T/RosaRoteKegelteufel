@@ -13,6 +13,11 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
+require File.expand_path("../../config/environment", __FILE__)
+require 'rubygems'
+require 'rspec/rails'
+ENV["RAILS_ENV"] ||= 'test'
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

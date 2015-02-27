@@ -1,6 +1,7 @@
-<h1>Listing events</h1>
+<div class="container">
+</a><h1>Calendar</h1>
 
-<table>
+<table hidden>
   <thead>
     <tr>
       <th>Title</th>
@@ -31,8 +32,34 @@
 
 
 <br>
-<div class= "active" id="calendar"></div>
-<br>
-<p type="button" class="btn btn-primary btn-sm"><%= link_to 'New Event', new_event_path %></p>
+
+<div class="content" class="col-md-6" >
+    <div class= "active" id="calendar"></div>
+</div>
 
 <br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">
+  New Event
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Event</h4>
+      </div>
+      <div class="modal-body">
+        <p id="notice"><%= notice %></p>
+        <%= render 'form' %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,33 +1,26 @@
+
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Userstories
+* Ein User soll Alben mit Name und Beschreibung anlegen können
+* Ein User soll Alben bearbeiten und löschen können
+* Ein User soll einem Album ein oder mehrere Fotos mit Namen zuordnen können
+* Ein User soll ein Foto löschen können
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-- Ein User soll Alben mit Name und Beschreibung anlegen können
-- Ein User soll Alben bearbeiten und löschen können
-- Ein User soll einem Album ein oder mehrere Fotos mit Namen zuordnen können
-- Ein User soll ein Foto löschen können
+== Bewertungskriterien
+* Verwendung von git und Github
+* Freischaltung des Dozenten für Projekt (@malagant)
+* Aussagekräftige README anlegen mit Installationshinweisen (Versionsnummern von benutzten Komponenten)
+* Einwandfreies Setup
+* Anlegen von Testdaten und Seeds
+* Planung und Dokumentation der User Stories
+* RSpec Tests für die Kernfunktionen
+* Heroku Deployment der Anwendung
+* Angemessene Komplexität (zeigt, was ihr könnt!)
+* Minimales CSS-/HTML-Design (z.B. Bootstrap)
+* Mindestens 6 Models mit Assoziationen (1:n, n:m)
+* Verwendung von mindestens 5 Gems (außer RoR)
+* Verwendung von Devise/Omniauth
+* Stetige Entwicklungsfortschritte
+* Gleichmäßige Beteiligung
+* Einhaltung von Rails-Standards
