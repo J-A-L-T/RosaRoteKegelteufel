@@ -33,7 +33,7 @@ class EventsController < ApplicationController
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        ;flash[:alert] = @event.errors.full_messages.to_sentence
       end
     end
   end
@@ -47,7 +47,7 @@ class EventsController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        ;flash[:alert] = @event.errors.full_messages.to_sentence
       end
     end
   end

@@ -5,8 +5,9 @@
   <%= f.text_field :date, :value => Date.today.to_s, :class => "form-control", "data-provide" => 'datepicker', "data-date-format" => 'yyyy-mm-dd'%>
   <%= f.collection_select :user_id, User.all, :id, :username,{ selected: @penalty_entry.user_id}, multiple: false, :class => "form-control" %>
   <%= f.collection_select :penalty_id, Penalty.all, :id, :name, { selected: @penalty_entry.penalty_id}, multiple: false, :class => "form-control" %>
-
+<p>
     <%= f.submit class: "btn btn-md btn-success" %>
+    </p>
     </div>
     </div>
 <% end %>
